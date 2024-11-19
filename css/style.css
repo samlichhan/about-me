@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=LXGW+WenKai+Mono+TC&family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
   --bg-black-900: #f2f2fc;
@@ -20,7 +20,7 @@ body {
   line-height: 1.5;
   font-size: 16px;
   /* font-family: 'Poppins' sans-serif; */
-  font-family: "Ubuntu Mono", cursive;
+  font-family: "Ubuntu Mono", "LXGW WenKai Mono TC", sans-serif;
 }
 
 @keyframes bounce {
@@ -33,12 +33,12 @@ body {
   }
 }
 
-@keyframes rainbow {
+@keyframes maskedAnimation {
   0% {
-    background-position: 100% 50%;
+    background-position: 0 0;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: -100% 0;
   }
 }
 
@@ -222,7 +222,7 @@ ul {
 }
 
 .aside .logo a span {
-  font-family: "Caveat", cursive;
+  font-family: "LXGW WenKai Mono TC", sans-serif;
   font-size: 40px;
   /* font-style: italic; */
   font-family: 40px;
@@ -356,7 +356,7 @@ h3.hello {
 }
 
 h3.hello span {
-  font-family: "Caveat", cursive;
+  font-family: "LXGW WenKai Mono TC", sans-serif;
   font-style: italic;
   font-size: 30px;
   font-weight: 700;
@@ -470,19 +470,19 @@ h3.myprofession {
 }
 
 .about .about-content .personal-info .info-item p span a {
-  background-image: linear-gradient(
-    90deg,
-    red,
-    pink
+  background-image: -webkit-linear-gradient(
+    left,
+    #147b96,
+    #e6d205 25%,
+    #147b96 50%,
+    #e6d205 75%,
+    #147b96
   );
-  background-size: 300% 100%;
-  background-clip: text;
+  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  color: transparent;
-  /* animation: ; */
+  -webkit-background-size: 200% 100%;
+  -webkit-animation: bounce 1s infinite, maskedAnimation 4s infinite linear;
   display: inline-block;
-  animation: bounce 1s infinite, rainbow 5s infinite linear;
-  /* color: var(--text-black-700); */
   font-weight: 700;
 }
 
@@ -824,9 +824,19 @@ h3.myprofession {
 }
 
 .contact .contact-info-item p a {
+  background-image: -webkit-linear-gradient(
+    left,
+    #147b96,
+    #e6d205 25%,
+    #147b96 50%,
+    #e6d205 75%,
+    #147b96
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-background-size: 200% 100%;
+  -webkit-animation: bounce 1s infinite, maskedAnimation 4s infinite linear;
   display: inline-block;
-  animation: bounce 1s infinite;
-  color: var(--text-black-700);
   font-weight: 700;
 }
 
@@ -872,10 +882,6 @@ h3.myprofession {
 .contact .contact-form .btn {
   height: 50px;
   padding: 0 50px;
-}
-
-.style-switcher .colors span {
-  cursor: pointer;
 }
 
 @media (max-width: 1199px) {

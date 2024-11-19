@@ -1,16 +1,3 @@
-var typed = new Typed(".typing", {
-  strings: [
-    "Full-Stack Engineer",
-    "Back-End Engineer",
-    "Front-End Engineer",
-    "Application Developer",
-  ],
-  typeSpeed: 20,
-  backSpeed: 10,
-  cursorChar: "🏃‍♂️",
-  loop: true,
-});
-
 const nav = document.querySelector(".nav"),
   navList = nav.querySelectorAll("li"),
   totalNavList = navList.length,

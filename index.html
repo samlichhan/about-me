@@ -33,19 +33,19 @@
         </div>
         <ul class="nav">
           <li>
-            <a href="#home" class="active"><i class="fa fa-home"></i> Home</a>
+            <a href="#home" class="active" id="tab_home"><i class="fa fa-home"></i> Home</a>
           </li>
           <li>
-            <a href="#about"><i class="fa fa-user"></i> About</a>
+            <a href="#about" id="tab_about"><i class="fa fa-user"></i> About</a>
           </li>
           <li>
-            <a href="#services"><i class="fa fa-list"></i> Services</a>
+            <a href="#services" id="tab_services"><i class="fa fa-list"></i> Services</a>
           </li>
           <li>
-            <a href="#portfolio"><i class="fa fa-briefcase"></i> Portfolio</a>
+            <a href="#portfolio" id="tab_portfolio"><i class="fa fa-briefcase"></i> Portfolio</a>
           </li>
           <li>
-            <a href="#contact"><i class="fa fa-comments"></i> Contact</a>
+            <a href="#contact" id="tab_contact"><i class="fa fa-comments"></i> Contact</a>
           </li>
         </ul>
       </div>
@@ -58,13 +58,13 @@
           <div class="container">
             <div class="row">
               <div class="home-info padd-15">
-                <h3 class="hello">
+                <h3 class="hello" id="twelcome">
                   Hello, my name is <span class="name"> Sam Li</span>
                 </h3>
                 <h3 class="myprofession">
-                  I'm a <span class="typing">Full-Stack Engineer</span>
+                  I can serve as <span class="typing"></span>
                 </h3>
-                <p>
+                <p id="tsintro">
                   I am a programmer with over one year of internship experience,
                   specializing in front-end and back-end engineering, creating
                   applications using Python, creating visual charts using
@@ -657,11 +657,15 @@
             <span class="color-4" onclick="setActiveStyle('color-4')"></span>
             <span class="color-5" onclick="setActiveStyle('color-5')"></span>
         </div>
+        <div class="language-switcher-toggler s-icon">
+          <i class="fa-solid"></i>
+        </div>
     </div>
     <!-- live style switcher end -->
     <!-- JS section -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/script.js"></script>
     <script src="./js/style-switcher.js"></script>
+    <script src="./js/language.js"></script>
   </body>
 </html>
