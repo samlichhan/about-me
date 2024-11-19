@@ -5,9 +5,9 @@ var typed = new Typed(".typing", {
     "Front-End Engineer",
     "Application Developer",
   ],
-  typeSpeed: 0,
-  backSpeed: 0,
-  cursorChar: "🏃‍♂️‍➡️",
+  typeSpeed: 20,
+  backSpeed: 10,
+  cursorChar: "🏃‍♂️",
   loop: true,
 });
 
