@@ -22,7 +22,10 @@ const trans = {
     taboutdegree: "Degree : <span>SCU CSIM</span>",
     taboutphone: "Phone : <span>(+886) 0987-115-592</span>",
     taboutcity: "City : <span>Taiwan, Taipei</span>",
-    tabouthireme: "Hire Me!"
+    tabouthireme: "Hire Me!",
+    taboutedu: "Education",
+    taboutexp: "Experience",
+    tabouttimeline1: "Bachelor of Computer Science Information Management"
   },
   zh: {
     // 首頁
@@ -45,7 +48,10 @@ const trans = {
     taboutdegree: "學位: <span>東吳大學資訊管理學系</span>",
     taboutphone: "聯絡電話 : <span>(+886) 0987-115-592</span>",
     taboutcity: "居住城市 : <span>台灣, 台北市</span>",
-    tabouthireme: "聯絡我!"
+    tabouthireme: "聯絡我!",
+    taboutedu: "學習歷程",
+    taboutexp: "工作經驗",
+    tabouttimeline1: "資訊管理學系學士"
   },
 };
 

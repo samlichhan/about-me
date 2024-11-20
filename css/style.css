@@ -42,6 +42,15 @@ body {
   }
 }
 
+@keyframes stripe-animation {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 20px 0;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -521,6 +530,7 @@ h3.myprofession {
   border-radius: 4px;
   width: 100%;
   position: relative;
+  /* overflow: hidden; */
 }
 
 .about .about-content .skills .skill-item .progress .progress-in {
@@ -529,7 +539,19 @@ h3.myprofession {
   top: 0;
   height: 100%;
   border-radius: 4px;
-  background-color: var(--skin-color);
+  /* background-color: var(--skin-color); */
+  background-image: linear-gradient(
+    135deg,
+    var(--skin-color) 25%,
+    white 25%,
+    white 50%,
+    var(--skin-color) 50%,
+    var(--skin-color) 75%,
+    white 75%,
+    white
+  );
+  background-size: 20px 20px;
+  animation: stripe-animation 0.8s linear infinite;
 }
 
 .about .about-content .skills .skill-item .skill-percent {
