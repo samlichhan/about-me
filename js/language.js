@@ -2,22 +2,50 @@ var typed;
 
 const trans = {
   en: {
+    // 首頁
     twelcome: "Hello, my name is <span class='name'>Sam Li</span>",
     tsintro: "I am a programmer with over one year of internship experience, specializing in front-end and back-end engineering, creating applications using Python, creating visual charts using PowerBI, and more",
     tab_home: "<i class='fa fa-home'></i> Home",
     tab_about: "<i class='fa fa-user'></i> About",
-    tab_services: "<i class='fa fa-list'></i> Services",
+    // tab_services: "<i class='fa fa-list'></i> Services",
     tab_portfolio: "<i class='fa fa-briefcase'></i> Portfolio",
-    tab_contact: "<i class='fa fa-comments'></i> Contact"
+    tab_contact: "<i class='fa fa-comments'></i> Contact",
+    
+    // 關於我
+    tabout: "About Me",
+    tabouttitle: "I'm <span>Sam</span>",
+    taboutintro: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta atque quisquam cupiditate tempora illum corporis, minima fuga eos, temporibus nobis voluptatum. Delectus quos debitis dolorum optio pariatur, consequuntur commodi incidunt.",
+    taboutbirth: "Birthday : <span>26 Mar 2002</span>",
+    taboutage: "Age : <span>22</span>",
+    taboutweb: "Website : <span><a href='https://pse.is/6q4b5d' target='_blank'>click here!</a></span>",
+    taboutmail: "Email : <span>lic85370@gmail.com</span>",
+    taboutdegree: "Degree : <span>SCU CSIM</span>",
+    taboutphone: "Phone : <span>(+886) 0987-115-592</span>",
+    taboutcity: "City : <span>Taiwan, Taipei</span>",
+    tabouthireme: "Hire Me!"
   },
   zh: {
+    // 首頁
     twelcome: "你好，我是<span class='name'>李承翰</span>",
     tsintro: "我是一名程式設計師，擁有超過一年實習經驗，專注於前端和後端開發，熟悉使用 Python 開發應用程式、使用 PowerBI 創建視覺化圖表等。",
     tab_home: "<i class='fa fa-home'></i> 首頁",
     tab_about: "<i class='fa fa-user'></i> 關於",
-    tab_services: "<i class='fa fa-list'></i> 服務",
+    // tab_services: "<i class='fa fa-list'></i> 服務",
     tab_portfolio: "<i class='fa fa-briefcase'></i> 作品集",
-    tab_contact: "<i class='fa fa-comments'></i> 聯絡我"
+    tab_contact: "<i class='fa fa-comments'></i> 聯絡我",
+
+    // 關於我
+    tabout: "關於我",
+    tabouttitle: "我是<span>李承翰</span>",
+    taboutintro: "這裡之後放自介",
+    taboutbirth: "生日 : <span>2002年 3月 26日</span>",
+    taboutage: "年齡 : <span>22 歲</span>",
+    taboutweb: "網站 : <span><a href='https://pse.is/6q4b5d' target='_blank'>傳送門!</a></span>",
+    taboutmail: "聯絡信箱 : <span>lic85370@gmail.com</span>",
+    taboutdegree: "學位: <span>東吳大學資訊管理學系</span>",
+    taboutphone: "聯絡電話 : <span>(+886) 0987-115-592</span>",
+    taboutcity: "居住城市 : <span>台灣, 台北市</span>",
+    tabouthireme: "聯絡我!"
   },
 };
 
@@ -65,14 +93,13 @@ languageSwitcherToggle.addEventListener("click", () => {
         loopCount: Infinity
     });
 
-    // 更新頁面文本
-    document.getElementById("twelcome").innerHTML = trans[currentLanguage].twelcome;
-    document.getElementById("tsintro").innerHTML = trans[currentLanguage].tsintro;
-    document.getElementById("tab_home").innerHTML = trans[currentLanguage].tab_home;
-    document.getElementById("tab_about").innerHTML = trans[currentLanguage].tab_about;
-    document.getElementById("tab_services").innerHTML = trans[currentLanguage].tab_services;
-    document.getElementById("tab_portfolio").innerHTML = trans[currentLanguage].tab_portfolio;
-    document.getElementById("tab_contact").innerHTML = trans[currentLanguage].tab_contact;
+    // loop
+    Object.keys(trans[currentLanguage]).forEach(key => {
+      const element = document.getElementById(key);
+      if (element) {
+        element.innerHTML = trans[currentLanguage][key];
+      }
+    });
 });
 
 window.addEventListener("load", () => {
