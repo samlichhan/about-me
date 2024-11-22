@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=LXGW+WenKai+Mono+TC&family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=LXGW+WenKai+Mono+TC&family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
   --bg-black-900: #f2f2fc;
@@ -767,7 +767,7 @@ h3.myprofession {
   border: 6px solid var(--bg-black-100);
   border-radius: 10px;
   overflow: hidden;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .portfolio .portfolio-item p {
@@ -781,6 +781,45 @@ h3.myprofession {
   position: relative;
   transition: transform 0.5s ease, scale 0.5s ease;
   /* transform-style: preserve-3d; */
+}
+
+.portfolio .portfolio-item-inner .portfolio-img .hover-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease; 
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 48px;
+  text-decoration: underline;
+  text-decoration-color: #f2f2fc;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img .hover-card a {
+  background-image: -webkit-linear-gradient(
+    left,
+    #f4fdde,
+    #75e290 25%,
+    #f4fdde 50%,
+    #75e290 75%,
+    #f4fdde
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-background-size: 200% 100%;
+  -webkit-animation: maskedAnimation 4s infinite linear;
+  display: inline-block;
+  font-weight: 700;
 }
 
 .portfolio .portfolio-item-inner .portfolio-img:hover {
@@ -797,6 +836,10 @@ h3.myprofession {
 
 .portfolio .portfolio-item-inner .portfolio-img:hover img {
   transform: scale(1.2);
+}
+
+.portfolio .portfolio-item-inner .portfolio-img:hover .hover-card {
+  opacity: 1;
 }
 
 /* contact */
