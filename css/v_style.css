@@ -39,8 +39,19 @@ body {
   background: url("https://raw.githubusercontent.com/samlichhan/about-me/refs/heads/main/images/bg2.png") no-repeat center center / cover;
 }
 
+#fadeElement {
+  opacity: 1;
+  transition: opacity 1s ease;
+  color: white;
+  border-radius: 5px;
+}
+
+#fadeElement.visible {
+  opacity: 0;
+}
+
 .title-text {
-  transform: translate(-45%, -50%);
+  transform: translate(-45%, -50%) scale(0.6);
   left: 50%;
   align-items: center;
   text-align: center;
@@ -54,9 +65,9 @@ body {
 
 .comp-title {
   position: fixed;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1.2);
+  transform: translate(-50%, -50%) scale(0.8);
   object-fit: cover;
 }
 
@@ -78,17 +89,18 @@ body {
 
 .brand img {
   /* width: 100%; */
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.6);
   left: 50%;
   align-items: center;
   text-align: center;
   position: fixed;
-  bottom: 10px;
+  bottom: 0px;
 }
 
 .snake-left {
+  transform: scale(0.6);
   position: fixed;
-  bottom: 10px;
+  bottom: 0px;
   left: 12px;
 }
 
@@ -97,8 +109,9 @@ body {
 }
 
 .snake-right {
+  transform: scale(0.6);
   position: fixed;
-  bottom: 10px;
+  bottom: 0px;
   right: 12px;
 }
 
