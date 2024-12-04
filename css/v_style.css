@@ -36,18 +36,8 @@ body {
   font-size: 16px;
   font-family: "Ubuntu Mono", "LXGW WenKai Mono TC", sans-serif;
   min-height: 100vh;
-  background: url("https://raw.githubusercontent.com/samlichhan/about-me/refs/heads/main/images/bg2.png") no-repeat center center / cover;
-}
-
-#fadeElement {
-  opacity: 1;
-  transition: opacity 1s ease;
-  color: white;
-  border-radius: 5px;
-}
-
-#fadeElement.visible {
-  opacity: 0;
+  background: url("https://raw.githubusercontent.com/samlichhan/about-me/refs/heads/main/images/bg2.png")
+    no-repeat center center / cover;
 }
 
 .title-text {
@@ -76,7 +66,7 @@ body {
   animation: zoomInOut 5s infinite ease-in-out;
 }
 
-.start-text p {
+.hint-text p {
   width: 100%;
   text-align: center;
   position: fixed;
@@ -85,6 +75,31 @@ body {
   bottom: 120px;
   cursor: default;
   -webkit-animation: bounce 4s infinite;
+}
+
+.gift {
+  /* width: 100%; */
+  transform: translate(-50%, -50%);
+  left: 50%;
+  text-align: center;
+  position: fixed;
+  font-size: 130px;
+  color: rgb(87, 84, 84);
+  bottom: 70px;
+  cursor: default;
+  transition: transform 0.3s ease;
+}
+
+.choosecard img {
+  width: 50%;
+  height: auto;
+  /* height: 30%; */
+  transform: translate(-50%, -50%) scale(0.8);
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  top: 65%;
 }
 
 .brand img {
