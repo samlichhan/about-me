@@ -46,7 +46,7 @@ body {
   align-items: center;
   text-align: center;
   position: fixed;
-  top: 20%;
+  top: 10%;
 }
 
 .title-text img {
@@ -55,7 +55,7 @@ body {
 
 .comp-title {
   position: fixed;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.8);
   object-fit: cover;
@@ -72,7 +72,7 @@ body {
   position: fixed;
   font-size: large;
   color: rgb(87, 84, 84);
-  bottom: 120px;
+  bottom: 80px;
   cursor: default;
   -webkit-animation: bounce 4s infinite;
 }
