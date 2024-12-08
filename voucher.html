@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>抽獎GO!</title>
     <link rel="stylesheet" href="./css/v_style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/actscript.js"></script>
   </head>
   <body>
     <div class="title-text">
@@ -20,16 +26,21 @@
         <p id="click-to-start">輕觸螢幕開始</p>
       </div> -->
       <!-- <img src="./images/envelop.png" alt=""> -->
-      <!-- <p class="gift">🎁</p> -->
-      <!-- <img src="./images/cookie.png" alt="" id="gift1" /> -->
-      <img src="./images/bag1.png" alt="" id="gift1" />
+      <p class="gift pick-gift">🎁</p>
+      <img src="./images/gift1.png" alt="" id="gift1" class="g1" />
+      <img src="./images/gift2.png" alt="" id="gift2" class="g2" />
+      <img src="./images/gift3.png" alt="" id="gift3" class="g3" />
+      <img src="./images/gift4.png" alt="" id="gift4" class="g4" />
+      <img src="./images/gift5.png" alt="" id="gift5" class="g5" />
+      <img src="./images/gift6.png" alt="" id="gift6" class="g6" />
+      <img src="./images/gift7.png" alt="" id="gift7" class="g7" />
+      <img src="./images/gift8.png" alt="" id="gift8" class="g8" />
+      <img src="./images/gift9.png" alt="" id="gift9" class="g9" />
       <div class="hint-text">
-        <p id="click-to-show">點選查看禮物!</p>
+        <p id="click-to-show" class="gift-hint">點選查看禮物!</p>
       </div>
     </div>
-    <div class="gift-show">
-      
-    </div>
+    <div class="gift-show"></div>
     <div class="brand">
       <img src="./images/OUR BRAND.png" />
     </div>
@@ -39,6 +50,119 @@
     <div class="snake-right">
       <img src="./images/風獅爺2.png" />
     </div>
-    <script src="./js/actscript.js"></script>
   </body>
+  <script>
+    $(".g1").hide();
+    $(".g2").hide();
+    $(".g3").hide();
+    $(".g4").hide();
+    $(".g5").hide();
+    $(".g6").hide();
+    $(".g7").hide();
+    $(".g8").hide();
+    $(".g9").hide();
+
+    $(".pick-gift").on("click", function () {
+      $(".gift-hint").hide();
+      $(".pick-gift").hide();
+      var prizes = [
+        { name: "大自然使者收納袋 (環保袋)", probability: 10 }, // g1
+        { name: "70週年紀念帆布袋", probability: 10 }, // g2
+        { name: "嘉新幸運籤餅", probability: 10 }, // g3
+        { name: "嘉新想蛇麼有蛇麼紅包袋", probability: 10 }, // g4
+        { name: "嘉新口罩", probability: 10 }, // g5
+        { name: "生活智慧大手冊 (側開式)", probability: 10 }, // g6
+        { name: "生活美學小筆記 (上開式)", probability: 10 }, // g7
+        { name: "生活品味墨寶 (筆)", probability: 10 }, // g8
+        { name: "追求生活美好大禮包", probability: 20 }, // g9
+      ];
+
+      var rand = Math.random() * 100;
+      var sum = 0;
+      var prize;
+
+      for (var i = 0; i < prizes.length; i++) {
+        sum += prizes[i].probability;
+        if (rand <= sum) {
+          prize = prizes[i].name;
+          break;
+        }
+      }
+
+      setTimeout(function () {
+        $(".gift-hint").show();
+        $(".gift-hint").text(prize);
+
+        switch (prize) {
+          case "大自然使者收納袋 (環保袋)":
+            $(".g1").show();
+            break;
+          case "70週年紀念帆布袋":
+            $(".g2").show();
+            break;
+          case "嘉新幸運籤餅":
+            $(".g3").show();
+            break;
+          case "嘉新想蛇麼有蛇麼紅包袋":
+            $(".g4").show();
+            break;
+          case "嘉新口罩":
+            $(".g5").show();
+            break;
+          case "生活智慧大手冊 (側開式)":
+            $(".g6").show();
+            break;
+          case "生活美學小筆記 (上開式)":
+            $(".g7").show();
+            break;
+          case "生活品味墨寶 (筆)":
+            $(".g8").show();
+            break;
+          case "追求生活美好大禮包":
+            $(".g9").show();
+            break;
+        }
+      }, 500);
+    });
+
+    function simulateDraw() {
+      var prizes = [
+        { name: "大自然使者收納袋 (環保袋)", probability: 10, count: 0 }, // g1
+        { name: "70週年紀念帆布袋", probability: 10, count: 0 }, // g2
+        { name: "嘉新幸運籤餅", probability: 10, count: 0 }, // g3
+        { name: "嘉新想蛇麼有蛇麼紅包袋", probability: 10, count: 0 }, // g4
+        { name: "嘉新口罩", probability: 10, count: 0 }, // g5
+        { name: "生活智慧大手冊 (側開式)", probability: 10, count: 0 }, // g6
+        { name: "生活美學小筆記 (上開式)", probability: 10, count: 0 }, // g7
+        { name: "生活品味墨寶 (筆)", probability: 10, count: 0 }, // g8
+        { name: "追求生活美好大禮包", probability: 20, count: 0 }, // g9
+      ];
+
+      var totalSimulations = 10000;
+
+      for (var i = 0; i < totalSimulations; i++) {
+        var rand = Math.random() * 100;
+        var sum = 0;
+        for (var j = 0; j < prizes.length; j++) {
+          sum += prizes[j].probability;
+          if (rand <= sum) {
+            prizes[j].count++;
+            break;
+          }
+        }
+      }
+
+      console.log("Simulation results over " + totalSimulations + " draws:");
+      prizes.forEach(function (prize) {
+        console.log(
+          prize.name +
+            ": " +
+            prize.count +
+            " (" +
+            ((prize.count / totalSimulations) * 100).toFixed(2) +
+            "%)"
+        );
+      });
+    }
+  </script>
 </html>
