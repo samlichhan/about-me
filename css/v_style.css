@@ -67,6 +67,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(0.8);
   object-fit: cover;
+  transition: top 1.2s ease;
 }
 
 .comp-title img {
@@ -80,7 +81,7 @@ body {
   position: fixed;
   font-size: large;
   color: rgb(87, 84, 84);
-  bottom: 80px;
+  bottom: 120px;
   cursor: default;
   -webkit-animation: bounce 4s infinite;
 }
@@ -98,16 +99,28 @@ body {
   animation: tilt-n-move-shaking 0.5s infinite;
 }
 
-.choosecard img {
-  width: 45%;
-  height: auto;
-  /* height: 30%; */
+.choosecard .xk {
+  width: 90%;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #beb2b2;
+  background-color: white;
+  box-shadow: 1px 1px 5px #333333;
   transform: translate(-50%, -50%) scale(0.8);
   align-items: center;
   text-align: center;
   position: fixed;
   left: 50%;
-  top: 65%;
+  top: 55%;
+}
+
+.choosecard .xk img {
+  width: 80%;
+}
+
+.gift-name {
+  font-size: 24px;
 }
 
 .brand img {
@@ -141,3 +154,4 @@ body {
 .snake-right img {
   animation: bounce 0.5s infinite;
 }
+

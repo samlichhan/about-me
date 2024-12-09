@@ -18,7 +18,7 @@
     </div>
     <div class="flower-left"></div>
     <div class="flower-right"></div>
-    <div class="comp-title">
+    <div class="comp-title" id="comp">
       <img src="./images/merge_s.png" class="logo" />
     </div>
     <div class="choosecard">
@@ -27,15 +27,19 @@
       </div> -->
       <!-- <img src="./images/envelop.png" alt=""> -->
       <p class="gift pick-gift">🎁</p>
-      <img src="./images/gift1.png" alt="" id="gift1" class="g1" />
-      <img src="./images/gift2.png" alt="" id="gift2" class="g2" />
-      <img src="./images/gift3.png" alt="" id="gift3" class="g3" />
-      <img src="./images/gift4.png" alt="" id="gift4" class="g4" />
-      <img src="./images/gift5.png" alt="" id="gift5" class="g5" />
-      <img src="./images/gift6.png" alt="" id="gift6" class="g6" />
-      <img src="./images/gift7.png" alt="" id="gift7" class="g7" />
-      <img src="./images/gift8.png" alt="" id="gift8" class="g8" />
-      <img src="./images/gift9.png" alt="" id="gift9" class="g9" />
+      <!-- <img src="./images/gift1.png" alt="" id="gift1" class="g1" /> -->
+      <div class="xk">
+        <img src="./images/gift2.png" alt="" id="gift2" class="g2" />
+        <img src="./images/gift3.png" alt="" id="gift3" class="g3" />
+        <img src="./images/gift4.png" alt="" id="gift4" class="g4" />
+        <img src="./images/gift5.png" alt="" id="gift5" class="g5" />
+        <img src="./images/gift6.png" alt="" id="gift6" class="g6" />
+        <img src="./images/gift7.png" alt="" id="gift7" class="g7" />
+        <img src="./images/gift8.png" alt="" id="gift8" class="g8" />
+        <img src="./images/gift9.png" alt="" id="gift9" class="g9" />
+        <br>
+        <p class="gift-name"></p>
+      </div>
       <div class="hint-text">
         <p id="click-to-show" class="gift-hint">點選查看禮物!</p>
       </div>
@@ -52,6 +56,8 @@
     </div>
   </body>
   <script>
+    $(".gift-name").hide();
+    $(".xk").hide();
     $(".g1").hide();
     $(".g2").hide();
     $(".g3").hide();
@@ -62,18 +68,22 @@
     $(".g8").hide();
     $(".g9").hide();
 
+    const object = document.getElementById("comp");
+
     $(".pick-gift").on("click", function () {
+      $(".title-text").hide();
       $(".gift-hint").hide();
       $(".pick-gift").hide();
+      object.style.top = "15%";
       var prizes = [
-        { name: "大自然使者收納袋 (環保袋)", probability: 10 }, // g1
+        // { name: "大自然使者收納袋 (環保袋)", probability: 10 }, // g1
         { name: "70週年紀念帆布袋", probability: 10 }, // g2
         { name: "嘉新幸運籤餅", probability: 10 }, // g3
         { name: "嘉新想蛇麼有蛇麼紅包袋", probability: 10 }, // g4
         { name: "嘉新口罩", probability: 10 }, // g5
         { name: "生活智慧大手冊 (側開式)", probability: 10 }, // g6
         { name: "生活美學小筆記 (上開式)", probability: 10 }, // g7
-        { name: "生活品味墨寶 (筆)", probability: 10 }, // g8
+        { name: "生活品味墨寶 (筆)", probability: 20 }, // g8
         { name: "追求生活美好大禮包", probability: 20 }, // g9
       ];
 
@@ -90,8 +100,9 @@
       }
 
       setTimeout(function () {
-        $(".gift-hint").show();
-        $(".gift-hint").text(prize);
+        $(".xk").show();
+        $(".gift-name").show();
+        $(".gift-name").text(prize);
 
         switch (prize) {
           case "大自然使者收納袋 (環保袋)":
@@ -122,12 +133,12 @@
             $(".g9").show();
             break;
         }
-      }, 500);
+      }, 1200);
     });
 
     function simulateDraw() {
       var prizes = [
-        { name: "大自然使者收納袋 (環保袋)", probability: 10, count: 0 }, // g1
+        // { name: "大自然使者收納袋 (環保袋)", probability: 10, count: 0 }, // g1
         { name: "70週年紀念帆布袋", probability: 10, count: 0 }, // g2
         { name: "嘉新幸運籤餅", probability: 10, count: 0 }, // g3
         { name: "嘉新想蛇麼有蛇麼紅包袋", probability: 10, count: 0 }, // g4
