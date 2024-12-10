@@ -82,7 +82,7 @@ body {
   position: fixed;
   font-size: 40px;
   color: rgb(87, 84, 84);
-  bottom: 180px;
+  bottom: 140px;
   cursor: default;
   -webkit-animation: bounce 4s infinite;
 }
@@ -95,13 +95,13 @@ body {
   position: fixed;
   font-size: 130px;
   color: rgb(87, 84, 84);
-  bottom: 130px;
+  bottom: 90px;
   cursor: default;
   animation: tilt-n-move-shaking 0.5s infinite;
 }
 
 .choosecard .xk {
-  width: 400px;
+  width: 380px;
   /* font-size: 15px; */
   padding: 5px;
   border-radius: 10px;
