@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=LXGW+WenKai+Mono+TC&family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
 
 * {
   margin: 0;
@@ -19,6 +19,12 @@
   }
 }
 
+@keyframes eachbounce {
+  to {
+    transform: translateY(-5px);
+  }
+}
+
 @keyframes zoomInOut {
   0% {
     transform: scale(1.2);
@@ -32,11 +38,30 @@
 }
 
 @keyframes tilt-n-move-shaking {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  25% { transform: translate(-50%, -50%) rotate(5deg); }
-  50% { transform: translate(-50%, -50%) rotate(0eg); }
-  75% { transform: translate(-50%, -50%) rotate(-5deg); }
-  100% { transform: translate(-50%, -50%) rotate(0deg); }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(5deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(0eg);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(-5deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 body {
@@ -114,11 +139,12 @@ body {
   position: fixed;
   left: 50%;
   top: 60%;
+  animation: fade 1.5s linear 0s;
 }
 
 .choosecard .xk img {
-   /* transform: scale(0.8);  */
-   width: 90%; 
+  /* transform: scale(0.8);  */
+  width: 90%;
 }
 
 .gift-name {
@@ -156,4 +182,3 @@ body {
 .snake-right img {
   animation: bounce 0.5s infinite;
 }
-

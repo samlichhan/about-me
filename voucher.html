@@ -38,7 +38,7 @@
         <img src="./images/gift7.png" alt="" id="gift7" class="g7" />
         <img src="./images/gift8.png" alt="" id="gift8" class="g8" />
         <img src="./images/gift9.png" alt="" id="gift9" class="g9" />
-        <br>
+        <br />
         <p class="gift-name"></p>
       </div>
       <div class="hint-text">
@@ -56,6 +56,12 @@
       <img src="./images/風獅爺2.png" />
     </div>
   </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
+    integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
   <script>
     $(".gift-name").hide();
     $(".xk").hide();
@@ -102,8 +108,21 @@
 
       setTimeout(function () {
         $(".xk").show();
+        typed = new Typed(".gift-name", {
+          strings: [
+            prize+"<br>",
+            "<a href='https://www.instagram.com/chcgroup_career.tw?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' target='_blank'>追蹤我們的IG!</a>"
+          ],
+          typeSpeed: 100,
+          backSpeed: 50,
+          backDelay: 1000,
+          startDelay: 100,
+          fadeOut: false,
+          cursorChar: "🎉🎉🎉🎉🎉🎉",
+          loop: true
+        });
         $(".gift-name").show();
-        $(".gift-name").text(prize);
+        // $(".gift-name").text(prize);
 
         switch (prize) {
           case "大自然使者收納袋 (環保袋)":
