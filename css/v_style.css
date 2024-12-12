@@ -101,7 +101,7 @@ body {
   animation: zoomInOut 5s infinite ease-in-out;
 }
 
-.hint-text p {
+.hint-text .gift-hint {
   width: 100%;
   text-align: center;
   position: fixed;
@@ -110,6 +110,19 @@ body {
   bottom: 10%;
   cursor: default;
   -webkit-animation: bounce 4s infinite;
+}
+
+.hint-text .hire-me a {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  font-size: 18px;
+  /* color: rgb(87, 84, 84); */
+  bottom: 8%;
+  -webkit-animation: bounce 6s infinite;
+  background: linear-gradient(to right, #2521f3, #ff6b08, #cf23cf, #eedd44);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .gift {

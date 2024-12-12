@@ -47,6 +47,7 @@
       </div>
       <div class="hint-text">
         <p id="click-to-show" class="gift-hint">點選打開禮物!</p>
+        <p class="hire-me"><a href="https://www.104.com.tw/company/5gonzzc?jobsource=index_s_ac" target="_blank">加入我們!</a></p>
       </div>
     </div>
     <div class="gift-show"></div>
@@ -67,6 +68,7 @@
     referrerpolicy="no-referrer"
   ></script>
   <script>
+    $(".hire-me").hide();
     $(".gift-name").hide();
     $(".xk").hide();
     $(".g1").hide();
@@ -112,6 +114,7 @@
 
       setTimeout(function () {
         $(".xk").show();
+        $(".hire-me").show();
         typed = new Typed(".gift-name", {
           strings: [
             "\\"+prize+"/",
