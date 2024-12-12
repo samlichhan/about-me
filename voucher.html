@@ -6,6 +6,10 @@
     <title>CHC抽獎趣</title>
     <link rel="icon" href="./images/chcico32_32.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/v_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -110,16 +114,17 @@
         $(".xk").show();
         typed = new Typed(".gift-name", {
           strings: [
-            prize+"<br>",
-            "<a href='https://www.instagram.com/chcgroup_career.tw?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' target='_blank'>追蹤我們的IG!</a>"
-          ],
+            prize,
+            "<a href='https://www.instagram.com/chcgroup_career.tw?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' target='_blank'><i class='ig-color fa-brands fa-instagram fa-lg'></i></a> 追蹤我們的IG!",
+            "<a href='https://line.me/R/ti/p/@352lxrhh' target='_blank'><i class='fa-brands fa-line fa-lg' style='color: #13e736;'></i></a> 加入我們的LINE@!",
+          ], 
           typeSpeed: 100,
           backSpeed: 50,
           backDelay: 1000,
           startDelay: 100,
           fadeOut: false,
-          cursorChar: "🎉🎉🎉🎉🎉🎉",
-          loop: true
+          cursorChar: "",
+          loop: true,
         });
         $(".gift-name").show();
         // $(".gift-name").text(prize);
