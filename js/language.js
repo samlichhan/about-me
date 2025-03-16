@@ -49,6 +49,23 @@ const trans = {
     // 作品集
     tport: "Portfolio",
     tportintro: "My Last Projects:",
+    tportai: "▲ AI-Based Presentation Generation",
+    tportdmoj: "▲ DMOJ Program Evaluation System",
+    tportfile: "▲ File Search System",
+    tportanaly: "▲ Analysis of Hotel Procurement & Sales Metrics",
+    tportaudit: "▲ Online Audit Working Paper Integration System",
+    tportbaby: "▲ Customer Service System for Gemcare Baby Care Center",
+    tportscholar: "▲ Scholarship Application System",
+    tporthrgame: "▲ Lucky Draw Mini Game for Career Expo",
+    tportmsapp1: "▲ Company Travel Expense Reimbursement App",
+
+    // 聯絡我
+    tcon: "Contact Me",
+    tconques: "Any Questions?",
+    tconserve: "I'm at your services!",
+    tconphone: "Call Me on",
+    tconsendmail: "Send Me An Email",
+    tconres: "I'll be PLEASURE to response your messages!",
   },
   zh: {
     // 首頁
@@ -97,6 +114,23 @@ const trans = {
     // 作品集
     tport: "作品集",
     tportintro: "最近專案:",
+    tportai: "▲ 基於人工智慧的簡報生成",
+    tportdmoj: "▲ DMOJ 程式檢測系統",
+    tportfile: "▲ 稽核資料查詢系統",
+    tportanaly: "▲ 飯店採購與銷售指標分析",
+    tportaudit: "▲ 稽核系統",
+    tportbaby: "▲ 月子中心照護系統",
+    tportscholar: "▲ 獎學金申請平台",
+    tporthrgame: "▲ Yourator 職涯博覽會抽獎小遊戲",
+    tportmsapp1: "▲ 公司外出旅費報支表",
+
+    // 聯絡我
+    tcon: "聯絡我",
+    tconques: "任何問題?",
+    tconserve: "隨時等您聯繫!",
+    tconphone: "透過電話聯繫我",
+    tconsendmail: "寄信給我",
+    tconres: "收到您的來信是我的榮幸!",
   }
 };
 
