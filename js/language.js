@@ -56,6 +56,8 @@ const trans = {
     tportaudit: "▲ Online Audit Working Paper Integration System",
     tportbaby: "▲ Customer Service System for Gemcare Baby Care Center",
     tportscholar: "▲ Scholarship Application System",
+    tporthrform: "▲ Survey Form (Inactive)",
+    tporthrgame1: "▲ Lucky Draw Mini Game for NTU Campus Recruitment",
     tporthrgame: "▲ Lucky Draw Mini Game for Career Expo",
     tportmsapp1: "▲ Company Travel Expense Reimbursement App",
 
@@ -121,6 +123,8 @@ const trans = {
     tportaudit: "▲ 稽核系統",
     tportbaby: "▲ 月子中心照護系統",
     tportscholar: "▲ 獎學金申請平台",
+    tporthrform: "▲ 問卷填答(未正式啟用)",
+    tporthrgame1: "▲ 台大校園徵才抽獎小遊戲",
     tporthrgame: "▲ Yourator 職涯博覽會抽獎小遊戲",
     tportmsapp1: "▲ 公司外出旅費報支表",
 
