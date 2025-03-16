@@ -801,11 +801,11 @@ h3.myprofession {
   box-sizing: border-box;
   text-align: center;
   font-size: 48px;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-decoration-color: #f2f2fc;
 }
 
-.portfolio .portfolio-item-inner .portfolio-img .hover-card a {
+.portfolio .portfolio-item-inner .portfolio-img .hover-card p {
   background-image: -webkit-linear-gradient(
     left,
     #f4fdde,
@@ -820,6 +820,30 @@ h3.myprofession {
   -webkit-animation: maskedAnimation 4s infinite linear;
   display: inline-block;
   font-weight: 700;
+  cursor: default;
+  font-size: medium;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img .hover-card a {
+  background-image: -webkit-linear-gradient(
+    left,
+    #8190ef,
+    #7168e9 25%,
+    #8190ef 50%,
+    #7168e9 75%,
+    #8190ef
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-background-size: 200% 100%;
+  -webkit-animation: maskedAnimation 15s infinite linear;
+  -webkit-animation: bounce 1s infinite;
+  color: #7168e9;
+  display: inline-block;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: large;
+  text-decoration: underline;
 }
 
 .portfolio .portfolio-item-inner .portfolio-img:hover {
