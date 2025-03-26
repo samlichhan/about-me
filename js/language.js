@@ -2,6 +2,9 @@ var typed;
 
 const trans = {
   en: {
+    // 網頁名稱
+    twebtitle: "My portfolio",
+
     // 首頁
     twelcome: "Hello, my name is <span class='name'>Sam Li</span>",
     // tican: "I can serve as <span class='typing'></span>",
@@ -72,6 +75,9 @@ const trans = {
     tconres: "I'll be PLEASURE to response your messages!",
   },
   zh: {
+    // 網頁名稱
+    twebtitle: "我的作品集",
+
     // 首頁
     twelcome: "你好，我是<span class='name'>李承翰</span>",
     // tican: "我會 <span class='typing'></span>",
