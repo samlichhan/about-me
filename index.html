@@ -166,7 +166,7 @@
                         </p>
                       </div>
                       <div class="info-item padd-15">
-                        <p id="taboutage">Age : <span>22</span></p>
+                        <p id="taboutage">Age : <span id="age-value"></span></p>
                       </div>
                       <div class="info-item padd-15">
                         <p id="taboutweb">
@@ -423,7 +423,7 @@
                           <div class="timeline-item">
                             <div class="circle-dot"></div>
                             <h3 class="timeline-date">
-                              <i class="fa fa-calendar"></i> 2024.01 - now
+                              <i class="fa fa-calendar"></i> 2024.01 - 2025.04
                             </h3>
                             <h4 class="timeline-title" id="tabouttimeline2_4">
                               Intern of IT
@@ -438,7 +438,7 @@
                               electronic invoice project on a postpartum care
                               center's website
                             </p>
-                            <span class="ability">PowerApps</span>
+                            <span class="ability">MS PowerApps</span>
                             <span class="ability">HTML</span>
                             <span class="ability">CSS</span>
                             <span class="ability">JS</span>
@@ -446,8 +446,8 @@
                             <span class="ability">CI3</span>
                             <span class="ability">CI4</span>
                             <span class="ability">git</span>
-                            <span class="ability">Linux</span>
-                            <span class="ability">SQL</span>
+                            <span class="ability">Linux Ubuntu</span>
+                            <!-- <span class="ability">SQL</span> -->
                             <span class="ability">MySQL</span>
                             <span class="ability">Python</span>
                           </div>
@@ -750,7 +750,9 @@
               <div class="contact-info-item padd-15">
                 <div class="icon"><i class="fa fa-envelope"></i></div>
                 <h4 id="tcemail">Email</h4>
-                <p><a href="mailto:lic85370@gmail.com">lic85370@gmail.com</a></p>
+                <p>
+                  <a href="mailto:lic85370@gmail.com">lic85370@gmail.com</a>
+                </p>
               </div>
               <div class="contact-info-item padd-15">
                 <div class="icon"><i class="fa fa-globe-asia"></i></div>
@@ -853,6 +855,28 @@
     </div>
     <!-- live style switcher end -->
     <!-- JS section -->
+    <!-- my age start -->
+    <script>
+      // 設定您的出生年月日
+      const birthDate = new Date("2002-03-26");
+
+      // 取得今天日期
+      const today = new Date();
+
+      // 計算年齡
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const monthDiff = today.getMonth() - birthDate.getMonth();
+      const dayDiff = today.getDate() - birthDate.getDate();
+
+      // 若尚未過生日則年齡 -1
+      if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+        age--;
+      }
+
+      // 將結果動態寫入 HTML
+      document.getElementById("age-value").textContent = age;
+    </script>
+    <!-- my age end -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
       integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
