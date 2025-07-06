@@ -452,6 +452,14 @@ h3.myprofession {
   color: var(--text-black-700);
 }
 
+.about .about-content .about-text p code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 10px;
+  color: var(--skin-color);
+}
+
 .about .about-content .personal-info {
   flex: 0 0 60%;
   max-width: 60%;

@@ -1,5 +1,84 @@
 var typed;
 
+var tababoutintro_entext = `Hi, my name is Sam, a graduate of
+                      <strong>Soochow University</strong>, Department of
+                      <strong>Computer Science Inforfmation Management</strong>.
+                      During my four years of study, I not only acquired solid
+                      technical knowledge but also actively engaged in
+                      extracurricular projects that broadened my professional
+                      and interpersonal skills. 
+                      <br /><br />
+                      🔧 <strong>Self-Motivated Learning & Technical Exploration</strong> 
+                      <br />
+                      Starting in my freshman year, I
+                      joined a <strong>self-learning group</strong> with several classmates,
+                      exploring tools and topics beyond the classroom such as
+                      <strong><code>Python</code>, <code>SketchUp</code>, <code>Kali Linux</code>, </strong>and <strong><code>Sweet Home 3D</code></strong>. These
+                      experiences deepened my understanding of both system logic
+                      and design thinking, and cultivated my ability to learn
+                      new technologies quickly and independently. In addition, I
+                      participated in various school-organized and
+                      corporate-sponsored courses, including:
+                      <br /> 
+                      &emsp;☁️ Cloud Platform Deployment
+                      <br /> 
+                      &emsp;🎮 VR Application & Unity Development
+                      <br /> 
+                      &emsp;📱 Android App Programming
+                      <br />
+                      These experiences helped me develop a well-rounded skill
+                      set and fostered an awareness of how technologies
+                      integrate into real-world applications. 
+                      <br /><br />
+                      🌐 <strong>Language Skills & Global Mindset</strong> 
+                      <br />
+                      In the summer of 2022, I joined an
+                      <strong>Advanced International English Communication Course</strong>, which
+                      provided intensive TOEIC training and practical business
+                      English practice. I passed the graduation benchmark and
+                      gained greater confidence in using English in a
+                      professional setting. Understanding that global
+                      collaboration is a norm in today's tech industry, I
+                      continue to improve my language skills to be ready for
+                      cross-border teamwork. 
+                      <br /><br />
+                      💪 <strong>Attitude & Future Outlook</strong> 
+                      <br />
+                      I am a <strong>fast learner, open to feedback and continuous improvement</strong>.
+                      I believe that flexibility and curiosity are key to
+                      thriving in the ever-evolving tech field. If given the
+                      opportunity to join your company, I will bring an
+                      enthusiastic, proactive spirit and strive to contribute
+                      value through real actions and long-term commitment.`
+
+var tababoutintro_cntext = `您好，我是李承翰，畢業於 
+                      <strong>東吳大學資訊管理學系</strong>。
+                      在四年的求學過程中，我不僅累積了紮實的資訊專業知識，也積極參與課外活動與專案實作，為進入職場打下多元的基礎。 
+                      <br /><br />
+                      🔧 <strong>主動學習 × 技術探索</strong> 
+                      <br />
+                      我從大一開始便與幾位志同道合的同學組成 <strong>自主學習社群</strong>，課餘期間主動接觸課堂以外的工具與技術，例如：
+                      <strong><code>Python</code>, <code>SketchUp</code>, <code>Kali Linux</code>,</strong>和<strong><code>Sweet Home 3D</code></strong>等等。這樣的嘗試讓我在實務與設計思維中都有更寬廣的視角，也訓練我面對新領域時，能快速吸收並應用的能力。
+                      此外，我也積極參與校內外開設的各類講座與課程，包括：
+                      <br /> 
+                      &emsp;☁️ 雲端平台建置與應用
+                      <br /> 
+                      &emsp;🎮 VR 技術與 Unity 開發基礎
+                      <br /> 
+                      &emsp;📱 Android App 開發實作
+                      <br />
+                      這些經歷幫助我建立跨技術的整合視野，也提升了我對於使用者需求與系統應用場景的敏銳度。
+                      <br /><br />
+                      🌐 <strong>語言能力 × 國際視野</strong> 
+                      <br />
+                      2022 年暑假我參與校內舉辦的
+                      <strong>高級國際英文溝通課程</strong>,課程以商業與科技英文為核心，並針對 TOEIC 多益進行進階訓練。在期末考中，我順利通過畢業門檻，也對自己的英文能力更具信心。我深知資訊產業正處於全球高度連結的環境，語言不僅是工具，更是溝通與成長的助力。
+                      <br /><br />
+                      💪 <strong>態度與未來展望</strong> 
+                      <br />
+                      我具備<strong>持續學習、接納建議、快速調整</strong>的特質，
+                      並相信唯有保持彈性與創新，才能在競爭激烈的環境中站穩腳步。如果有幸成為貴公司的一員，我將秉持積極的態度，勇於承擔並持續成長，期許能為團隊貢獻實質價值，並在未來的專業路上不斷前進。`
+
 function calculateAge(birthDateStr) {
   const birthDate = new Date(birthDateStr);
   const today = new Date();
@@ -34,8 +113,7 @@ const trans = {
     // 關於我
     tabout: "About Me",
     tabouttitle: "I'm <span>Sam</span>",
-    taboutintro:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta atque quisquam cupiditate tempora illum corporis, minima fuga eos, temporibus nobis voluptatum. Delectus quos debitis dolorum optio pariatur, consequuntur commodi incidunt.",
+    taboutintro: tababoutintro_entext,
     taboutbirth: "Birthday : <span>26 Mar 2002</span>",
     taboutage: "Age : " + calculateAge("2002-03-26"),
     taboutweb:
@@ -112,7 +190,7 @@ const trans = {
     // 關於我
     tabout: "關於我",
     tabouttitle: "我是<span>李承翰</span>",
-    taboutintro: "這裡之後放自介",
+    taboutintro: tababoutintro_cntext,
     taboutbirth: "生日 : <span>2002年 3月 26日</span>",
     taboutage: "年齡 : " + calculateAge("2002-03-26"),
     taboutweb:
