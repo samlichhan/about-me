@@ -342,7 +342,7 @@
                           <div class="timeline-item">
                             <div class="circle-dot"></div>
                             <h3 class="timeline-date">
-                              <i class="fa fa-calendar"></i> 2023.06 - 2024.09
+                              <i class="fa fa-calendar"></i> 2023.06 - 2024.06
                             </h3>
                             <h4 class="timeline-title" id="tabouttimeline2">
                               Research Assistant
@@ -857,23 +857,17 @@
     <!-- JS section -->
     <!-- my age start -->
     <script>
-      // 設定您的出生年月日
       const birthDate = new Date("2002-03-26");
-
-      // 取得今天日期
       const today = new Date();
 
-      // 計算年齡
       let age = today.getFullYear() - birthDate.getFullYear();
       const monthDiff = today.getMonth() - birthDate.getMonth();
       const dayDiff = today.getDate() - birthDate.getDate();
 
-      // 若尚未過生日則年齡 -1
       if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
         age--;
       }
 
-      // 將結果動態寫入 HTML
       document.getElementById("age-value").textContent = age;
     </script>
     <!-- my age end -->

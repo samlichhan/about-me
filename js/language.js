@@ -1,5 +1,20 @@
 var typed;
 
+function calculateAge(birthDateStr) {
+  const birthDate = new Date(birthDateStr);
+  const today = new Date();
+
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+  const dayDiff = today.getDate() - birthDate.getDate();
+
+  if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+    age--;
+  }
+
+  return age;
+}
+
 const trans = {
   en: {
     // 網頁名稱
@@ -22,7 +37,7 @@ const trans = {
     taboutintro:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta atque quisquam cupiditate tempora illum corporis, minima fuga eos, temporibus nobis voluptatum. Delectus quos debitis dolorum optio pariatur, consequuntur commodi incidunt.",
     taboutbirth: "Birthday : <span>26 Mar 2002</span>",
-    taboutage: "Age : <span>22</span>",
+    taboutage: "Age : " + calculateAge("2002-03-26"),
     taboutweb:
       "Website : <span><a href='https://pse.is/6q4b5d' target='_blank'>click here!</a></span>",
     taboutmail: "Email : <span>lic85370@gmail.com</span>",
@@ -39,15 +54,20 @@ const trans = {
     taboutdes1_1:
       "Developed a system integrating ChatGPT API to generate AI-driven text and corresponding thematic images, which were seamlessly populated into appropriate PowerPoint templates. The project involved fine-tuning AI-generated content and enabling users to regenerate, add, or modify content through an interactive interface. The final output was a complete PowerPoint file featuring fully designed presentation slides and speaker notes with supplementary scripts.",
     tabouttimeline2: "Research Assistant",
-    taboutdes2: "Developed a DMOJ program evaluation system and authored comprehensive installation and user manuals to facilitate seamless handover and ongoing maintenance",
+    taboutdes2:
+      "Developed a DMOJ program evaluation system and authored comprehensive installation and user manuals to facilitate seamless handover and ongoing maintenance",
     tabouttimeline2_1: "Visual Analysis Charts",
-    taboutdes2_1: "Managed internal self-evaluation and supervisor assessment data by creating visual analysis charts and comprehensive spreadsheets, streamlining data organization and supporting future data-driven decision-making",
+    taboutdes2_1:
+      "Managed internal self-evaluation and supervisor assessment data by creating visual analysis charts and comprehensive spreadsheets, streamlining data organization and supporting future data-driven decision-making",
     tabouttimeline2_2: "Teaching Assistant",
-    taboutdes2_2: "<span>Computer Programming</span><span>Object Oriented Programming</span> <br />Assist professors in setting exam questions, clarify students' doubts, and analyze the distribution of students' grades",
+    taboutdes2_2:
+      "<span>Computer Programming</span><span>Object Oriented Programming</span> <br />Assist professors in setting exam questions, clarify students' doubts, and analyze the distribution of students' grades",
     tabouttimeline2_3: "Intern of Audit",
-    taboutdes2_3: "Developed audit utility programs, including verification of company database records against public Ministry of Economic Affairs data, a visual interface for searching NAS documents by keyword or category, templates for subsidiary procurement and sales reports in Power BI, and an integrated audit working paper system",
+    taboutdes2_3:
+      "Developed audit utility programs, including verification of company database records against public Ministry of Economic Affairs data, a visual interface for searching NAS documents by keyword or category, templates for subsidiary procurement and sales reports in Power BI, and an integrated audit working paper system",
     tabouttimeline2_4: "Intern of IT",
-    taboutdes2_4: "Developed and tested Microsoft PowerApps to digitize legacy paper-based forms, upgraded outdated system frameworks, created web-based mini-games and data collection tools for the Human Resources department, and led back-end development while supporting front-end tasks for the electronic invoice project on a postpartum care center's website",
+    taboutdes2_4:
+      "Developed and tested Microsoft PowerApps to digitize legacy paper-based forms, upgraded outdated system frameworks, created web-based mini-games and data collection tools for the Human Resources department, and led back-end development while supporting front-end tasks for the electronic invoice project on a postpartum care center's website",
 
     // 作品集
     tport: "Portfolio",
@@ -94,7 +114,7 @@ const trans = {
     tabouttitle: "我是<span>李承翰</span>",
     taboutintro: "這裡之後放自介",
     taboutbirth: "生日 : <span>2002年 3月 26日</span>",
-    taboutage: "年齡 : <span>22 歲</span>",
+    taboutage: "年齡 : " + calculateAge("2002-03-26"),
     taboutweb:
       "網站 : <span><a href='https://pse.is/6q4b5d' target='_blank'>傳送門!</a></span>",
     taboutmail: "聯絡信箱 : <span>lic85370@gmail.com</span>",
@@ -111,16 +131,21 @@ const trans = {
     taboutdes1_1:
       "開發了一套系統，整合 ChatGPT API 以生成 AI 驅動的文本及相應主題圖片，並將其填入適合的 PowerPoint 範本中。專案包括對 AI 生成內容的微調，讓使用者能透過互動介面重新生成、添加或修改內容。最終輸出為一個完整的 PowerPoint 文件，其中包含完善的簡報頁面以及附有補充腳本的演講者備註",
     tabouttimeline2: "研究助理",
-    taboutdes2: "開發了 DMOJ 程式評測系統，並撰寫完整的安裝與使用手冊，以確保系統交接順利並支持後續的維護工作",
+    taboutdes2:
+      "開發了 DMOJ 程式評測系統，並撰寫完整的安裝與使用手冊，以確保系統交接順利並支持後續的維護工作",
     tabouttimeline2_1: "視覺化分析圖表",
-    taboutdes2_1: "管理內部自我評估與主管評核數據，透過製作視覺化分析圖表及完整的電子表格，優化數據整理流程，並支持未來以數據為導向的決策制定。",
+    taboutdes2_1:
+      "管理內部自我評估與主管評核數據，透過製作視覺化分析圖表及完整的電子表格，優化數據整理流程，並支持未來以數據為導向的決策制定。",
     tabouttimeline2_2: "教學助理",
-    taboutdes2_2: "<span>計算機程式設計</span><span>物件導向程式設計</span> <br />協助教授設計考題，解答學生疑問，並分析學生成績分佈。",
+    taboutdes2_2:
+      "<span>計算機程式設計</span><span>物件導向程式設計</span> <br />協助教授設計考題，解答學生疑問，並分析學生成績分佈。",
     tabouttimeline2_3: "稽核室實習生",
-    taboutdes2_3: "開發多項稽核工具程式，包括比對公司資料庫記錄與經濟部公開數據的驗證功能、關鍵字或分類搜尋 NAS 文件的視覺化介面、Power BI 子公司採購與銷售報表模板，以及整合的審計工作底稿系統。",
+    taboutdes2_3:
+      "開發多項稽核工具程式，包括比對公司資料庫記錄與經濟部公開數據的驗證功能、關鍵字或分類搜尋 NAS 文件的視覺化介面、Power BI 子公司採購與銷售報表模板，以及整合的審計工作底稿系統。",
     tabouttimeline2_4: "資訊處實習生",
-    taboutdes2_4: "開發並測試 Microsoft PowerApps以數位化傳統紙本表單，升級過時系統框架，為人力資源部門製作基於網頁的迷你遊戲及數據收集工具，並主導月子中心系統電子發票專案的後端開發，同時支援前端相關工作。",
-    
+    taboutdes2_4:
+      "開發並測試 Microsoft PowerApps以數位化傳統紙本表單，升級過時系統框架，為人力資源部門製作基於網頁的迷你遊戲及數據收集工具，並主導月子中心系統電子發票專案的後端開發，同時支援前端相關工作。",
+
     // 作品集
     tport: "作品集",
     tportintro: "最近專案:",
@@ -145,7 +170,7 @@ const trans = {
     tconphone: "透過電話聯繫我",
     tconsendmail: "寄信給我",
     tconres: "收到您的來信是我的榮幸!",
-  }
+  },
 };
 
 let currentLanguage = "en";
