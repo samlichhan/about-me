@@ -23,6 +23,10 @@ body {
   font-family: "Ubuntu Mono", "LXGW WenKai Mono TC", sans-serif;
 }
 
+.fancy-highlight {
+  background: linear-gradient(transparent 90%, var(--skin-color) 80%);
+}
+
 .collapsible-container {
   /* width: 500px; */
   margin-bottom: 2em;
@@ -61,33 +65,6 @@ body {
 
 .arrow.rotate {
   transform: rotate(180deg);
-}
-
-#backToTop {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 48px;
-  height: 48px;
-  background-color: var(--skin-color);
-  color: white;
-  font-size: 24px;
-  border-radius: 50%;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 999;
-}
-
-#backToTop.show {
-  opacity: 1;
-  pointer-events: auto;
-  transform: scale(1);
 }
 
 @keyframes bounce {
@@ -180,6 +157,12 @@ ul {
 /* .main-content {
   padding-left: 270px;
 } */
+
+.main-content {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth; /* 滑順滾動 */
+}
 
 .padd-15 {
   padding-left: 15px;
@@ -722,7 +705,7 @@ h3.myprofession {
   color: var(--text-black-700);
 }
 
-.about .about-content .timeline .timeline-text span {
+/* .about .about-content .timeline .timeline-text span {
   margin-bottom: 10px;
   line-height: 25px;
   font-size: 13px;
@@ -732,7 +715,7 @@ h3.myprofession {
   padding: 2px 4px;
   border-radius: 6px;
   background-color: var(--bg-black-100);
-}
+} */
 
 .about .about-content .timeline .timeline-item span.ability {
   float: right;

@@ -91,5 +91,9 @@
 }
 
 .style-switcher .language-switcher-toggler {
-    top: 110px;
-  }
+  top: 110px;
+}
+
+.style-switcher .go-to-top {
+  top: 165px;
+}

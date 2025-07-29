@@ -1,103 +1,169 @@
 var typed;
 
-var tababoutintro_entext = `Hi, my name is Sam, a graduate of
-                      <strong>Soochow University</strong>, Department of
-                      <strong>Computer Science Inforfmation Management</strong>.
-                      During my four years of study, I not only acquired solid
-                      technical knowledge but also actively engaged in
-                      extracurricular projects that broadened my professional
-                      and interpersonal skills. 
-                      <br /><br />
-                      🔧 <strong>Self-Motivated Learning & Technical Exploration</strong> 
-                      <br />
-                      Starting in my freshman year, I
-                      joined a <strong>self-learning group</strong> with several classmates,
-                      exploring tools and topics beyond the classroom such as
-                      <strong><code>Python</code>, <code>SketchUp</code>, <code>Kali Linux</code>, </strong>and <strong><code>Sweet Home 3D</code></strong>. These
-                      experiences deepened my understanding of both system logic
-                      and design thinking, and cultivated my ability to learn
-                      new technologies quickly and independently. In addition, I
-                      participated in various school-organized and
-                      corporate-sponsored courses, including:
-                      <br /> 
-                      &emsp;☁️ Cloud Platform Deployment
-                      <br /> 
-                      &emsp;🎮 VR Application & Unity Development
-                      <br /> 
-                      &emsp;📱 Android App Programming
-                      <br />
-                      These experiences helped me develop a well-rounded skill
-                      set and fostered an awareness of how technologies
-                      integrate into real-world applications. 
-                      <br /><br />
-                      🌐 <strong>Language Skills & Global Mindset</strong> 
-                      <br />
-                      In the summer of 2022, I joined an
-                      <strong>Advanced International English Communication Course</strong>, which
-                      provided intensive TOEIC training and practical business
-                      English practice. I passed the graduation benchmark and
-                      gained greater confidence in using English in a
-                      professional setting. Understanding that global
-                      collaboration is a norm in today's tech industry, I
-                      continue to improve my language skills to be ready for
-                      cross-border teamwork. 
-                      <br /><br />
-                      💪 <strong>Attitude & Future Outlook</strong> 
-                      <br />
-                      I am a <strong>fast learner, open to feedback and continuous improvement</strong>.
-                      I believe that flexibility and curiosity are key to
-                      thriving in the ever-evolving tech field. If given the
-                      opportunity to join your company, I will bring an
-                      enthusiastic, proactive spirit and strive to contribute
-                      value through real actions and long-term commitment.`;
+var tababoutintro_entext = `Hello, I’m Sam Li, a graduate of the Department of Information Management at Soochow University.  
+                            Throughout my four years of study, I built a solid foundation in information technology and actively engaged in practical projects and industry experience. These efforts helped me develop hands-on skills in cross-technology integration and problem-solving, laying a comprehensive foundation for my career.<br /><br />
 
-var tababoutintro_cntext = `您好，我是李承翰，畢業於 
-                      <strong>東吳大學資訊管理學系</strong>。
-                      在四年的求學過程中，我不僅累積了紮實的資訊專業知識，也積極參與課外活動與專案實作，為進入職場打下多元的基礎。 
-                      <br /><br />
-                      🔧 <strong>主動學習 × 技術探索</strong> 
-                      <br />
-                      我從大一開始便與幾位志同道合的同學組成 <strong>自主學習社群</strong>，課餘期間主動接觸課堂以外的工具與技術，例如：
-                      <strong><code>Python</code>, <code>SketchUp</code>, <code>Kali Linux</code>,</strong>和<strong><code>Sweet Home 3D</code></strong>等等。這樣的嘗試讓我在實務與設計思維中都有更寬廣的視角，也訓練我面對新領域時，能快速吸收並應用的能力。
-                      此外，我也積極參與校內外開設的各類講座與課程，包括：
-                      <br /> 
-                      &emsp;☁️ 雲端平台建置與應用
-                      <br /> 
-                      &emsp;🎮 VR 技術與 Unity 開發基礎
-                      <br /> 
-                      &emsp;📱 Android App 開發實作
-                      <br />
-                      這些經歷幫助我建立跨技術的整合視野，也提升了我對於使用者需求與系統應用場景的敏銳度。
-                      <br /><br />
-                      🌐 <strong>語言能力 × 國際視野</strong> 
-                      <br />
-                      2022 年暑假我參與校內舉辦的
-                      <strong>高級國際英文溝通課程</strong>,課程以商業與科技英文為核心，並針對 TOEIC 多益進行進階訓練。在期末考中，我順利通過畢業門檻，也對自己的英文能力更具信心。我深知資訊產業正處於全球高度連結的環境，語言不僅是工具，更是溝通與成長的助力。
-                      <br /><br />
-                      💪 <strong>態度與未來展望</strong> 
-                      <br />
-                      我具備<strong>持續學習、接納建議、快速調整</strong>的特質，
-                      並相信唯有保持彈性與創新，才能在競爭激烈的環境中站穩腳步。如果有幸成為貴公司的一員，我將秉持積極的態度，勇於承擔並持續成長，期許能為團隊貢獻實質價值，並在未來的專業路上不斷前進。`;
+                            <strong>Technical Practice and Independent Exploration</strong><br />
+                            Since my freshman year, I have joined a self-learning group with like-minded classmates to explore technical tools beyond the classroom, such as  
+                            Python, Kali Linux, SketchUp, and Sweet Home 3D.  
+                            These experiences broadened my technical perspective and trained me to quickly absorb and apply knowledge when facing new domains.<br />
+                            In addition to self-study, I also participated in various technical seminars and university-led training courses, including VR technologies and Unity development, Android app development, and cloud platform implementation.  
+                            These experiences deepened my understanding of system thinking and cross-platform integration.<br /><br />
 
-function calculateAge(birthDateStr) {
-  const birthDate = new Date(birthDateStr);
-  const today = new Date();
+                            <strong>Industry Experience｜Chia Hsin Cement Corporation</strong><br />
+                            During my internship at Chia Hsin Cement Corporation, I worked in the Audit Office (Sep. 2023 – Apr. 2024) and the Information Technology Department (Apr. 2024 – Apr. 2025), completing the following tasks:<br /><br />
 
-  let age = today.getFullYear() - birthDate.getFullYear();
-  const monthDiff = today.getMonth() - birthDate.getMonth();
-  const dayDiff = today.getDate() - birthDate.getDate();
+                            <strong>Audit Office｜Automation and Digital Transformation</strong><br />
+                            1. Developed three internal support tools using Python to significantly reduce repetitive manual processes.<br />
+                            2. Independently built an online audit platform (Codeigniter4 + MariaDB), fully replacing traditional paper-based approval workflows and greatly improving operational efficiency and traceability.<br />
+                            3. Managed the entire system development process—from server architecture and database design to feature implementation—and regularly collaborated with users to review functionality and plan improvements, further strengthening my skills in system design and communication.<br /><br />
 
-  if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
-    age--;
-  }
+                            <strong>IT Department｜System Integration and Platform Upgrade</strong><br />
+                            1. Participated in the postpartum care center platform project, responsible for integrating e-invoice APIs (PanYu E-Commerce Co., Ltd.), adjusting financial modules, and maintaining overall system operations.<br />
+                            2. Assisted in upgrading the Chia Hsin Foundation's platform (CI3 → CI4, MySQL 5 → 8), completing data migration and system restructuring.<br />
+                            3. Used MS PowerApps to build digital forms, successfully replacing paper-based processes (e.g., parking space applications, equipment reservations, travel reimbursement), which significantly improved administrative efficiency.<br /><br />
 
-  return age;
-}
+                            <strong>
+                            Supported the HR team in developing interactive recruitment games and campaign landing pages for campus hiring and job fair promotions:
+                            </strong><br />
+                            1.
+                            <a
+                              href="https://chcgroups.github.io/forNTU/"
+                              target="_blank"
+                              >NTU Campus Recruitment Page</a
+                            >
+                            <br />
+                            2.
+                            <a
+                              href="https://chcgroups.github.io/for_yourator/"
+                              target="_blank"
+                              >Yourator Career Expo Page</a
+                            >
+                            <br />
+                            3.
+                            <a
+                              href="https://chcgroups.github.io/forFJU/"
+                              target="_blank"
+                              >FJU Campus Recruitment Page</a
+                            >
+                            <br />
+                            4.
+                            <a
+                              href="https://chcgroups.github.io/forfun/game"
+                              target="_blank"
+                              >Interactive Survey Game</a
+                            >
+
+                            <br /><br /><font color="orange"
+                            ><strong>
+                            Projects involved Codeigniter 3/4, MySQL, API integration, simple frontend development, and internal MIS system support.
+                            </strong></font><br /><br />
+
+                            Additionally, I built a personal website to showcase my work and technical experience, which I continue to maintain and update:<br />
+                            About Me –  
+                            <a
+                              href="https://samlichhan.github.io/about-me/"
+                              target="_blank"
+                              >Personal Portfolio Website</a
+                            ><br />
+
+                            <br /><strong>Language Proficiency and Global Communication</strong><br />
+                            In 2022, I completed the university’s “Advanced International English Communication” course, focusing on business and technical English, and significantly improved my TOEIC score upon completion.<br />
+                            I regularly read English technical documentation, participate in international developer communities, and watch educational videos to continuously enhance both my language and technical skills.<br /><br />
+
+                            <strong>Work Ethic and Future Outlook</strong><br />
+                            I am proactive, responsible, and communicative, always seeking solutions through exploration and validating ideas through hands-on implementation.  
+                            I look forward to applying my strengths in the workplace and making a meaningful contribution.<br /><br />
+
+                            This is my self-introduction, and I sincerely hope to have the opportunity for a further interview with your company!
+                            `;
+
+var tababoutintro_cntext = `您好，我是李承翰，畢業於東吳大學資訊管理學系。在四年的學習歷程中，我不僅打下了紮實的資訊技術基礎，也主動參與實作專案與業界實務，累積跨技術整合與問題解決的實戰經驗，奠定全面基礎。<br /><br />
+                            <strong>技術實作與自主探索</strong><br />
+                            自大一起，我便與幾位志同道合的同學組成「自主學習社群」，利用課餘時間探索課堂外的技術工具，如
+                            Python、Kali Linux、SketchUp、Sweet Home 3D
+                            等，這不僅拓展了我的技術視野，也訓練我面對新領域時快速吸收與應用的能力。<br />
+                            除了課餘時的自學，我亦參與多場技術講座與校內進修課程，舉凡VR
+                            技術與 Unity 開發、Android App
+                            開發、雲端平台建置與應用等。
+                            這些體驗加深了我對系統性思維與跨平台整合的觀念。<br /><br />
+                            <strong>業界專案歷練｜嘉新水泥集團</strong><br />
+                            在嘉新水泥任職稽核室(2023.09 ~
+                            2024.04)與資訊處(2024.04 ~
+                            2025.04)工讀生的期間，我完成了以下事項：<br /><br />
+                            <strong>稽核室｜資訊自動化與數位轉型</strong><br />
+                            1. 使用 Python
+                            開發三項內部輔助工具，有效降低手動重工流程。<br />
+                            2. 獨立開發稽核線上工作平台（Codeigniter4 +
+                            MariaDB），全面取代傳統紙本簽核，大幅提升作業效率與可追溯性。<br />
+                            3.
+                            系統從伺服器架構、資料庫設計到功能實作皆由我獨立完成，並定期與使用者討論功能與改善項目，強化了我的系統設計與溝通協調能力。<br /><br />
+                            <strong>資訊處｜系統整合與平台升級</strong><br />
+                            1.
+                            參與月子中心平台專案，負責電子發票（汎宇電商股份有限公司）API
+                            串接、財務模組調整與整體項目維護。<br />
+                            2. 協助嘉新基金會平台升級（CI3 → CI4、MySQL 5 →
+                            8），完成資料轉移與系統重構。 <br />
+                            3. 應用 MS PowerApps
+                            製作數位表單，成功替代紙本流程（如停車位申請、設備借用、旅費報支等），提升內部行政效率。<br /><br />
+                            <strong
+                              >協助人資團隊製作互動式徵才遊戲與活動頁，用於校園招募與博覽會推廣：</strong
+                            ><br />
+                            1.
+                            <a
+                              href="https://chcgroups.github.io/forNTU/"
+                              target="_blank"
+                              >台大校園招募活動頁</a
+                            >
+                            <br />
+                            2.
+                            <a
+                              href="https://chcgroups.github.io/for_yourator/"
+                              target="_blank"
+                              >Yourator 徵才博覽會頁</a
+                            >
+                            <br />
+                            3.
+                            <a
+                              href="https://chcgroups.github.io/forFJU/"
+                              target="_blank"
+                              >輔大校園招募頁</a
+                            >
+                            <br />
+                            4.
+                            <a
+                              href="https://chcgroups.github.io/forfun/game"
+                              target="_blank"
+                              >線上互動填答遊戲</a
+                            >
+
+                            <br /><br /><font color="orange"
+                              ><strong
+                                >經手項目涵蓋 Codeigniter3/4、MySQL、API
+                                串接、簡易前端互動與內部 MIS 維護。</strong
+                              ></font
+                            ><br /><br />
+                            另建置個人網站以展示作品與技能紀錄，持續維運更新：<br />
+                            關於我 –
+                            <a
+                              href="https://samlichhan.github.io/about-me/"
+                              target="_blank"
+                              >個人作品網站</a
+                            ><br />
+                            <br /><strong>語言能力與國際溝通</strong><br />
+                            我於 2022
+                            年修習學校開設的「高級國際英文溝通課程」，專注於商業與科技英文，並於結業時進一步提升
+                            TOEIC 成績。<br />
+                            平時也習慣閱讀英文技術文件、國外開發者社群與教學影片，不斷精進語言與技術雙能力。<br /><br />
+                            <strong>態度與未來展望</strong><br />
+                            具備主動學習力、高度責任感與溝通協調能力的我，習慣從問題中尋求解法、在實作中驗證技術。
+                            期望未來在工作上，能讓自己的專長充分發揮。<br /><br />
+                            以上是我的自傳，期望能與貴公司進一步面試的機會!`;
 
 const trans = {
   en: {
     // 網頁名稱
-    twebtitle: "My portfolio",
+    twebtitle: "About me - Sam Li",
 
     // 首頁
     twelcome: "Hello, my name is <span class='name'>Sam Li</span>",
@@ -106,7 +172,7 @@ const trans = {
       // "I am a programmer with over one year of internship experience, specializing in front-end and back-end engineering, creating applications using Python, creating visual charts using PowerBI, and more",
       `Thank you for taking the time to visit my website 🙏<br />
 <br />Over the past few years during my internship, I’ve had the opportunity to engage in various hands-on development projects, such as building an online audit platform, integrating e-invoice APIs, and participating in system upgrade initiatives. My technical experience includes Codeigniter, MySQL, and Python, and I have also used Microsoft PowerApps to drive form digitization.
-<br />I enjoy exploring new tools, learning across different domains, and working with teams to solve problems. I look forward to applying these experiences in a professional setting in the future.`,
+<br /><br />I enjoy exploring new tools, learning across different domains, and working with teams to solve problems. I look forward to applying these experiences in a professional setting in the future.`,
     tdownloadcv: "Download CV",
     tab_home: "<i class='fa fa-home'></i> Home",
     tab_about: "<i class='fa fa-user'></i> About",
@@ -178,7 +244,7 @@ const trans = {
   },
   zh: {
     // 網頁名稱
-    twebtitle: "我的作品集",
+    twebtitle: "關於我 - 李承翰",
 
     // 首頁
     twelcome: "您好，我是<span class='name'>李承翰</span>",
@@ -284,6 +350,19 @@ const languageSwitcherToggle = document.querySelector(
   ".language-switcher-toggler"
 );
 languageSwitcherToggle.addEventListener("click", () => {
+  document.querySelectorAll(".collapsible-container").forEach((container) => {
+    const textBlock = container.querySelector(".collapsible-text");
+    const toggleBtn = container.querySelector(".toggle-button");
+    const arrow = toggleBtn.querySelector(".arrow");
+    const label = toggleBtn.querySelector("span");
+    if ((label.textContent = "收合內容")) {
+      textBlock.style.height = "3em";
+      textBlock.classList.add("collapsed");
+      arrow.classList.remove("rotate");
+      label.textContent = "顯示更多";
+    }
+  });
+
   typed.destroy();
   languageSwitcherToggle.querySelector("i").classList.toggle("fa-e");
   languageSwitcherToggle.querySelector("i").classList.toggle("fa-c");

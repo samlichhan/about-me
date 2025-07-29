@@ -33,7 +33,7 @@ function removeBackSection() {
 }
 
 function addBackSection(element) {
-    allSection[element].classList.add("back-section");
+  allSection[element].classList.add("back-section");
 }
 
 function showSection(element) {
@@ -78,4 +78,19 @@ function asideSectionTogglerBtn() {
   for (let i = 0; i < totalSection; i++) {
     allSection[i].classList.toggle("open");
   }
+}
+
+function calculateAge(birthDateStr) {
+  const birthDate = new Date(birthDateStr);
+  const today = new Date();
+
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+  const dayDiff = today.getDate() - birthDate.getDate();
+
+  if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+    age--;
+  }
+
+  return age;
 }
