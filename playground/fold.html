@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .collapsible-container {
+      width: 500px;
+      margin-bottom: 2em;
+      font-family: sans-serif;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1em;
+    }
+
+    .collapsible-text {
+      overflow: hidden;
+      transition: height 1.2s ease, opacity 0.2s ease;
+      opacity: 1;
+    }
+
+    .collapsed {
+      height: 3em;
+      opacity: 0.8;
+    }
+
+    .toggle-button {
+      display: flex;
+      align-items: center;
+      margin-top: 0.5em;
+      color: #1a73e8;
+      cursor: pointer;
+      user-select: none;
+      font-size: 1em;
+    }
+
+    .arrow {
+      display: inline-block;
+      margin-left: 6px;
+      transition: transform 1.5s ease;
+    }
+
+    .arrow.rotate {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+
+<!-- 可重複使用的摺疊區塊 -->
+<div class="collapsible-container">
+  <div class="collapsible-text collapsed">
+    <div class="text-inner">
+        您好，我是李承翰，畢業於 
+        <strong>東吳大學資訊管理學系</strong>。
+        在四年的求學過程中，我不僅累積了紮實的資訊專業知識，也積極參與課外活動與專案實作，為進入職場打下多元的基礎。 
+        <br /><br />
+        🔧 <strong>主動學習 × 技術探索</strong> 
+        <br />
+        我從大一開始便與幾位志同道合的同學組成 <strong>自主學習社群</strong>，課餘期間主動接觸課堂以外的工具與技術，例如：
+        <strong><code>Python</code>, <code>SketchUp</code>, <code>Kali Linux</code>,</strong>和<strong><code>Sweet Home 3D</code></strong>等等。這樣的嘗試讓我在實務與設計思維中都有更寬廣的視角，也訓練我面對新領域時，能快速吸收並應用的能力。
+        此外，我也積極參與校內外開設的各類講座與課程，包括：
+        <br /> 
+        &emsp;☁️ 雲端平台建置與應用
+        <br /> 
+        &emsp;🎮 VR 技術與 Unity 開發基礎
+        <br /> 
+        &emsp;📱 Android App 開發實作
+        <br />
+        這些經歷幫助我建立跨技術的整合視野，也提升了我對於使用者需求與系統應用場景的敏銳度。
+        <br /><br />
+        🌐 <strong>語言能力 × 國際視野</strong> 
+        <br />
+        2022 年暑假我參與校內舉辦的
+        <strong>高級國際英文溝通課程</strong>,課程以商業與科技英文為核心，並針對 TOEIC 多益進行進階訓練。在期末考中，我順利通過畢業門檻，也對自己的英文能力更具信心。我深知資訊產業正處於全球高度連結的環境，語言不僅是工具，更是溝通與成長的助力。
+        <br /><br />
+        💪 <strong>態度與未來展望</strong> 
+        <br />
+        我具備<strong>持續學習、接納建議、快速調整</strong>的特質，
+        並相信唯有保持彈性與創新，才能在競爭激烈的環境中站穩腳步。如果有幸成為貴公司的一員，我將秉持積極的態度，勇於承擔並持續成長，期許能為團隊貢獻實質價值，並在未來的專業路上不斷前進。
+    </div>
+  </div>
+  <div class="toggle-button">
+    <span>顯示更多</span>
+    <span class="arrow">▼</span>
+  </div>
+</div>
+
+<div class="collapsible-container">
+  <div class="collapsible-text collapsed">
+    <div class="text-inner">
+      第二段範例內容也能同樣支援。<br>
+      適用於說明欄、摘要區、使用者留言等。
+    </div>
+  </div>
+  <div class="toggle-button">
+    <span>顯示更多</span>
+    <span class="arrow">▼</span>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.collapsible-container').forEach(container => {
+    const textBlock = container.querySelector('.collapsible-text');
+    const inner = container.querySelector('.text-inner');
+    const toggleBtn = container.querySelector('.toggle-button');
+    const arrow = toggleBtn.querySelector('.arrow');
+    const label = toggleBtn.querySelector('span');
+
+    let expanded = false;
+
+    // 設定初始高度
+    textBlock.style.height = '3em';
+
+    toggleBtn.addEventListener('click', () => {
+      if (!expanded) {
+        const fullHeight = inner.scrollHeight + 'px';
+        textBlock.style.height = fullHeight;
+        textBlock.classList.remove('collapsed');
+        arrow.classList.add('rotate');
+        label.textContent = '收合內容';
+      } else {
+        textBlock.style.height = '3em';
+        textBlock.classList.add('collapsed');
+        arrow.classList.remove('rotate');
+        label.textContent = '顯示更多';
+      }
+      expanded = !expanded;
+    });
+  });
+</script>
+
+</body>
+</html>

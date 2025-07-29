@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>摺疊段落與返回頂部</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 2em;
+    }
+
+    .collapsible-container {
+      width: 600px;
+      margin-bottom: 2em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1em;
+      background: #f9f9f9;
+    }
+
+    .collapsible-text {
+      overflow: hidden;
+      transition: height 0.4s ease, opacity 0.4s ease;
+      opacity: 1;
+    }
+
+    .collapsed {
+      height: 3em;
+      opacity: 0.85;
+    }
+
+    .toggle-button {
+      display: flex;
+      align-items: center;
+      margin-top: 0.5em;
+      color: #1a73e8;
+      cursor: pointer;
+      user-select: none;
+      font-size: 1em;
+    }
+
+    .arrow {
+      display: inline-block;
+      margin-left: 6px;
+      transition: transform 0.4s ease;
+    }
+
+    .arrow.rotate {
+      transform: rotate(180deg);
+    }
+
+    /* 懸浮球按鈕樣式 */
+    #backToTop {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      background-color: #1a73e8;
+      color: white;
+      font-size: 24px;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 999;
+    }
+
+    #backToTop.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body>
+
+<h2>摺疊段落示範</h2>
+
+<div class="collapsible-container">
+  <div class="collapsible-text collapsed">
+    <div class="text-inner">
+        您好，我是李承翰，畢業於東吳大學資訊管理學系。在四年的學習歷程中，我不僅打下了紮實的資訊技術基礎，也主動參與實作專案與業界實務，累積跨技術整合與問題解決的實戰經驗，奠定全面基礎。<br /><br />
+        <strong>技術實作與自主探索</strong><br />
+        自大一起，我便與幾位志同道合的同學組成「自主學習社群」，利用課餘時間探索課堂外的技術工具，如
+        Python、Kali Linux、SketchUp、Sweet Home 3D
+        等，這不僅拓展了我的技術視野，也訓練我面對新領域時快速吸收與應用的能力。<br />
+        除了課餘時的自學，我亦參與多場技術講座與校內進修課程，舉凡VR
+        技術與 Unity 開發、Android App
+        開發、雲端平台建置與應用等。
+        這些體驗加深了我對系統性思維與跨平台整合的觀念。<br /><br />
+        <strong>業界專案歷練｜嘉新水泥集團</strong><br />
+        在嘉新水泥任職稽核室(2023.09 ~
+        2024.04)與資訊處(2024.04 ~
+        2025.04)工讀生的期間，我完成了以下事項：<br /><br />
+        <strong>稽核室｜資訊自動化與數位轉型</strong><br />
+        1. 使用 Python
+        開發三項內部輔助工具，有效降低手動重工流程。<br />
+        2. 獨立開發稽核線上工作平台（Codeigniter4 +
+        MariaDB），全面取代傳統紙本簽核，大幅提升作業效率與可追溯性。<br />
+        3.
+        系統從伺服器架構、資料庫設計到功能實作皆由我獨立完成，並定期與使用者討論功能與改善項目，強化了我的系統設計與溝通協調能力。<br /><br />
+        <strong>資訊處｜系統整合與平台升級</strong><br />
+        1.
+        參與月子中心平台專案，負責電子發票（汎宇電商股份有限公司）API
+        串接、財務模組調整與整體項目維護。<br />
+        2. 協助嘉新基金會平台升級（CI3 → CI4、MySQL 5 →
+        8），完成資料轉移與系統重構。 <br />
+        3. 應用 MS PowerApps
+        製作數位表單，成功替代紙本流程（如停車位申請、設備借用、旅費報支等），提升內部行政效率。<br /><br />
+        <strong
+          >協助人資團隊製作互動式徵才遊戲與活動頁，用於校園招募與博覽會推廣：</strong
+        ><br />
+        1.
+        <a
+          href="https://chcgroups.github.io/forNTU/"
+          target="_blank"
+          >台大校園招募活動頁</a
+        >
+        <br />
+        2.
+        <a
+          href="https://chcgroups.github.io/for_yourator/"
+          target="_blank"
+          >Yourator 徵才博覽會頁</a
+        >
+        <br />
+        3.
+        <a
+          href="https://chcgroups.github.io/forFJU/"
+          target="_blank"
+          >輔大校園招募頁</a
+        >
+        <br />
+        4.
+        <a
+          href="https://chcgroups.github.io/forfun/game"
+          target="_blank"
+          >線上互動填答遊戲</a
+        >
+
+        <br /><br /><font color="orange"
+          ><strong
+            >經手項目涵蓋 Codeigniter3/4、MySQL、API
+            串接、簡易前端互動與內部 MIS 維護。</strong
+          ></font
+        ><br /><br />
+        另建置個人網站以展示作品與技能紀錄，持續維運更新：<br />
+        關於我 –
+        <a
+          href="https://samlichhan.github.io/about-me/"
+          target="_blank"
+          >個人作品網站</a
+        ><br />
+        <br /><strong>語言能力與國際溝通</strong><br />
+        我於 2022
+        年修習學校開設的「高級國際英文溝通課程」，專注於商業與科技英文，並於結業時進一步提升
+        TOEIC 成績。<br />
+        平時也習慣閱讀英文技術文件、國外開發者社群與教學影片，不斷精進語言與技術雙能力。<br /><br />
+        <strong>態度與未來展望</strong><br />
+        具備主動學習力、高度責任感與溝通協調能力的我，習慣從問題中尋求解法、在實作中驗證技術。
+        期望未來在工作上，能讓自己的專長充分發揮。<br /><br />
+        以上是我的自傳，期望能與貴公司進一步面試的機會!
+    </div>
+  </div>
+  <div class="toggle-button">
+    <span>顯示更多</span>
+    <span class="arrow">▼</span>
+  </div>
+</div>
+
+<div class="collapsible-container">
+  <div class="collapsible-text collapsed">
+    <div class="text-inner">
+      第二段範例內容也能同樣支援。<br>
+      適用於說明欄、摘要區、使用者留言等。<br>
+      效果可套用於多個區塊，且彼此不影響。
+    </div>
+  </div>
+  <div class="toggle-button">
+    <span>顯示更多</span>
+    <span class="arrow">▼</span>
+  </div>
+</div>
+
+<!-- 懸浮返回頂部按鈕 -->
+<div id="backToTop" title="回到頂部">↑</div>
+
+<script>
+  // 處理摺疊展開功能
+  document.querySelectorAll('.collapsible-container').forEach(container => {
+    const textBlock = container.querySelector('.collapsible-text');
+    const inner = container.querySelector('.text-inner');
+    const toggleBtn = container.querySelector('.toggle-button');
+    const arrow = toggleBtn.querySelector('.arrow');
+    const label = toggleBtn.querySelector('span');
+
+    let expanded = false;
+
+    // 初始高度設定
+    textBlock.style.height = '3em';
+
+    toggleBtn.addEventListener('click', () => {
+      if (!expanded) {
+        const fullHeight = inner.scrollHeight + 'px';
+        textBlock.style.height = fullHeight;
+        textBlock.classList.remove('collapsed');
+        arrow.classList.add('rotate');
+        label.textContent = '收合內容';
+      } else {
+        textBlock.style.height = '3em';
+        textBlock.classList.add('collapsed');
+        arrow.classList.remove('rotate');
+        label.textContent = '顯示更多';
+      }
+      expanded = !expanded;
+    });
+  });
+
+  // 懸浮返回頂部按鈕控制
+  const backToTopBtn = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      backToTopBtn.classList.add('show');
+    } else {
+      backToTopBtn.classList.remove('show');
+    }
+  });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });    
+  });
+</script>
+
+</body>
+</html>

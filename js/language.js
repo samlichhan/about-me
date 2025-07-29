@@ -49,7 +49,7 @@ var tababoutintro_entext = `Hi, my name is Sam, a graduate of
                       thriving in the ever-evolving tech field. If given the
                       opportunity to join your company, I will bring an
                       enthusiastic, proactive spirit and strive to contribute
-                      value through real actions and long-term commitment.`
+                      value through real actions and long-term commitment.`;
 
 var tababoutintro_cntext = `您好，我是李承翰，畢業於 
                       <strong>東吳大學資訊管理學系</strong>。
@@ -77,7 +77,7 @@ var tababoutintro_cntext = `您好，我是李承翰，畢業於
                       💪 <strong>態度與未來展望</strong> 
                       <br />
                       我具備<strong>持續學習、接納建議、快速調整</strong>的特質，
-                      並相信唯有保持彈性與創新，才能在競爭激烈的環境中站穩腳步。如果有幸成為貴公司的一員，我將秉持積極的態度，勇於承擔並持續成長，期許能為團隊貢獻實質價值，並在未來的專業路上不斷前進。`
+                      並相信唯有保持彈性與創新，才能在競爭激烈的環境中站穩腳步。如果有幸成為貴公司的一員，我將秉持積極的態度，勇於承擔並持續成長，期許能為團隊貢獻實質價值，並在未來的專業路上不斷前進。`;
 
 function calculateAge(birthDateStr) {
   const birthDate = new Date(birthDateStr);
@@ -101,9 +101,13 @@ const trans = {
 
     // 首頁
     twelcome: "Hello, my name is <span class='name'>Sam Li</span>",
-    // tican: "I can serve as <span class='typing'></span>",
+    tican: "I can serve as <span class='typing'></span>",
     tsintro:
-      "I am a programmer with over one year of internship experience, specializing in front-end and back-end engineering, creating applications using Python, creating visual charts using PowerBI, and more",
+      // "I am a programmer with over one year of internship experience, specializing in front-end and back-end engineering, creating applications using Python, creating visual charts using PowerBI, and more",
+      `Thank you for taking the time to visit my website 🙏<br />
+<br />Over the past few years during my internship, I’ve had the opportunity to engage in various hands-on development projects, such as building an online audit platform, integrating e-invoice APIs, and participating in system upgrade initiatives. My technical experience includes Codeigniter, MySQL, and Python, and I have also used Microsoft PowerApps to drive form digitization.
+<br />I enjoy exploring new tools, learning across different domains, and working with teams to solve problems. I look forward to applying these experiences in a professional setting in the future.`,
+    tdownloadcv: "Download CV",
     tab_home: "<i class='fa fa-home'></i> Home",
     tab_about: "<i class='fa fa-user'></i> About",
     // tab_services: "<i class='fa fa-list'></i> Services",
@@ -177,10 +181,17 @@ const trans = {
     twebtitle: "我的作品集",
 
     // 首頁
-    twelcome: "你好，我是<span class='name'>李承翰</span>",
-    // tican: "我會 <span class='typing'></span>",
+    twelcome: "您好，我是<span class='name'>李承翰</span>",
+    tican: "我可以是 <span class='typing'></span>",
     tsintro:
-      "我是一名程式設計師，擁有超過一年實習經驗，專注於前端和後端開發，熟悉使用 Python 開發應用程式、使用 PowerBI 創建視覺化圖表等。",
+      // "我是一名程式設計師，擁有超過一年實習經驗，專注於前端和後端開發，熟悉使用 Python 開發應用程式、使用 PowerBI 創建視覺化圖表等。",
+      `感謝您抽空來到我的網站 🙏<br />
+                  <br /> 這幾年在實習期間有幸接觸到不少實務開發工作，像是開發稽核線上作業平台、整合電子發票
+                  API、參與系統升級等，技術涵蓋
+                  Codeigniter、MySQL、Python，也曾運用 MS PowerApps
+                  推動表單數位化。<br />
+                  <br /> 我喜歡嘗試新工具、學習不同領域的東西，也很享受和團隊一起解決問題的過程。期望未來能將這些經驗發揮在工作中。`,
+    tdownloadcv: "下載履歷",
     tab_home: "<i class='fa fa-home'></i> 首頁",
     tab_about: "<i class='fa fa-user'></i> 關於",
     // tab_services: "<i class='fa fa-list'></i> 服務",
@@ -251,7 +262,7 @@ const trans = {
   },
 };
 
-let currentLanguage = "en";
+let currentLanguage = "zh";
 
 typed = new Typed(".typing", {
   strings: [
@@ -262,10 +273,10 @@ typed = new Typed(".typing", {
   ],
   typeSpeed: 20,
   backSpeed: 10,
-  backDelay: 1000,
+  backDelay: 1200,
   startDelay: 0,
   fadeOut: false,
-  cursorChar: "🔥",
+  cursorChar: " ⭐️",
   loop: true,
 });
 
@@ -274,25 +285,25 @@ const languageSwitcherToggle = document.querySelector(
 );
 languageSwitcherToggle.addEventListener("click", () => {
   typed.destroy();
-  languageSwitcherToggle.querySelector("i").classList.toggle("fa-c");
   languageSwitcherToggle.querySelector("i").classList.toggle("fa-e");
+  languageSwitcherToggle.querySelector("i").classList.toggle("fa-c");
 
   currentLanguage = currentLanguage === "zh" ? "en" : "zh";
 
   typed = new Typed(".typing", {
     strings: [
-      currentLanguage === "zh" ? "全端工程師" : "Full-Stack Engineer",
-      currentLanguage === "zh" ? "後端工程師" : "Back-End Engineer",
-      currentLanguage === "zh" ? "前端工程師" : "Front-End Engineer",
-      currentLanguage === "zh" ? "應用程式開發師" : "Application Developer",
+      currentLanguage === "zh" ? "全端工程" : "Full-Stack Engineer",
+      currentLanguage === "zh" ? "後端工程" : "Back-End Engineer",
+      currentLanguage === "zh" ? "前端工程" : "Front-End Engineer",
+      currentLanguage === "zh" ? "應用程式開發" : "Application Developer",
     ],
-    typeSpeed: 30,
+    typeSpeed: 20,
     backSpeed: 10,
-    backDelay: 500,
+    backDelay: 1200,
     startDelay: 0,
-    cursorChar: "🔥",
+    fadeOut: false,
+    cursorChar: " ⭐️",
     loop: true,
-    loopCount: Infinity,
   });
 
   // loop
