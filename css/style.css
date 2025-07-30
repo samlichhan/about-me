@@ -23,6 +23,10 @@ body {
   font-family: "Ubuntu Mono", "LXGW WenKai Mono TC", sans-serif;
 }
 
+a:visited {
+  text-decoration: none;
+}
+
 .fancy-highlight {
   background: linear-gradient(transparent 90%, var(--skin-color) 80%);
 }

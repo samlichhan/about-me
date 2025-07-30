@@ -1,81 +1,60 @@
 var typed;
 
-var tababoutintro_entext = `Hello, I’m Sam Li, a graduate of the Department of Information Management at Soochow University.  
-                            Throughout my four years of study, I built a solid foundation in information technology and actively engaged in practical projects and industry experience. These efforts helped me develop hands-on skills in cross-technology integration and problem-solving, laying a comprehensive foundation for my career.<br /><br />
+var tababoutintro_entext = `Hello, I am Sam Li, a graduate of the Department of Information Management at Soochow University. Throughout my four-year academic journey, I built a solid foundation in information technology while actively engaging in hands-on projects and industry practices. These experiences have equipped me with practical skills in cross-technology integration and problem-solving, laying the groundwork for a well-rounded professional profile.
 
-                            <strong>Technical Practice and Independent Exploration</strong><br />
-                            Since my freshman year, I have joined a self-learning group with like-minded classmates to explore technical tools beyond the classroom, such as  
-                            Python, Kali Linux, SketchUp, and Sweet Home 3D.  
-                            These experiences broadened my technical perspective and trained me to quickly absorb and apply knowledge when facing new domains.<br />
-                            In addition to self-study, I also participated in various technical seminars and university-led training courses, including VR technologies and Unity development, Android app development, and cloud platform implementation.  
-                            These experiences deepened my understanding of system thinking and cross-platform integration.<br /><br />
+<br /><br />
+<strong>Technical Implementation and Self-Directed Exploration</strong><br />
+Since my first year, I have formed a “self-learning group” with like-minded peers, dedicating our spare time to exploring technologies beyond the classroom, including Python, Kali Linux, SketchUp, and Sweet Home 3D. This greatly broadened my technical horizon and strengthened my ability to quickly learn and apply new tools in unfamiliar domains.<br />
+Beyond self-study, I also attended numerous technical workshops and on-campus training sessions, covering topics such as VR technology and Unity development, Android app development, and cloud platform deployment and applications. These experiences deepened my understanding of system thinking and cross-platform integration.
 
-                            <strong>Industry Experience｜Chia Hsin Cement Corporation</strong><br />
-                            During my internship at Chia Hsin Cement Corporation, I worked in the Audit Office (Sep. 2023 – Apr. 2024) and the Information Technology Department (Apr. 2024 – Apr. 2025), completing the following tasks:<br /><br />
+<br /><br />
+<strong>Industry Project Experience | Chia Hsin Cement Group</strong><br />
+During my internship at Chia Hsin Cement Group’s Audit Office (Sep 2023 – Apr 2024) and IT Department (Apr 2024 – Apr 2025), I accomplished the following:
 
-                            <strong>Audit Office｜Automation and Digital Transformation</strong><br />
-                            1. Developed three internal support tools using Python to significantly reduce repetitive manual processes.<br />
-                            2. Independently built an online audit platform (Codeigniter4 + MariaDB), fully replacing traditional paper-based approval workflows and greatly improving operational efficiency and traceability.<br />
-                            3. Managed the entire system development process—from server architecture and database design to feature implementation—and regularly collaborated with users to review functionality and plan improvements, further strengthening my skills in system design and communication.<br /><br />
+<br /><br />
+<strong>Audit Office | IT Automation and Digital Transformation</strong><br />
 
-                            <strong>IT Department｜System Integration and Platform Upgrade</strong><br />
-                            1. Participated in the postpartum care center platform project, responsible for integrating e-invoice APIs (PanYu E-Commerce Co., Ltd.), adjusting financial modules, and maintaining overall system operations.<br />
-                            2. Assisted in upgrading the Chia Hsin Foundation's platform (CI3 → CI4, MySQL 5 → 8), completing data migration and system restructuring.<br />
-                            3. Used MS PowerApps to build digital forms, successfully replacing paper-based processes (e.g., parking space applications, equipment reservations, travel reimbursement), which significantly improved administrative efficiency.<br /><br />
+1. Developed three internal support tools using Python, significantly reducing manual workflows.<br />
 
-                            <strong>
-                            Supported the HR team in developing interactive recruitment games and campaign landing pages for campus hiring and job fair promotions:
-                            </strong><br />
-                            1.
-                            <a
-                              href="https://chcgroups.github.io/forNTU/"
-                              target="_blank"
-                              >NTU Campus Recruitment Page</a
-                            >
-                            <br />
-                            2.
-                            <a
-                              href="https://chcgroups.github.io/for_yourator/"
-                              target="_blank"
-                              >Yourator Career Expo Page</a
-                            >
-                            <br />
-                            3.
-                            <a
-                              href="https://chcgroups.github.io/forFJU/"
-                              target="_blank"
-                              >FJU Campus Recruitment Page</a
-                            >
-                            <br />
-                            4.
-                            <a
-                              href="https://chcgroups.github.io/forfun/game"
-                              target="_blank"
-                              >Interactive Survey Game</a
-                            >
+2. Independently built an online audit workflow platform (CodeIgniter4 + MariaDB), fully replacing traditional paper-based processes and greatly enhancing efficiency and traceability.<br />
 
-                            <br /><br /><font color="orange"
-                            ><strong>
-                            Projects involved Codeigniter 3/4, MySQL, API integration, simple frontend development, and internal MIS system support.
-                            </strong></font><br /><br />
+3. Managed the system from server architecture and database design to feature implementation. I also held regular discussions with users to iterate and improve functionalities, which enhanced my system design and communication skills.
 
-                            Additionally, I built a personal website to showcase my work and technical experience, which I continue to maintain and update:<br />
-                            About Me –  
-                            <a
-                              href="https://samlichhan.github.io/about-me/"
-                              target="_blank"
-                              >Personal Portfolio Website</a
-                            ><br />
+<br /><br />
+<strong>IT Department | System Integration and Platform Upgrade</strong><br />
 
-                            <br /><strong>Language Proficiency and Global Communication</strong><br />
-                            In 2022, I completed the university’s “Advanced International English Communication” course, focusing on business and technical English, and significantly improved my TOEIC score upon completion.<br />
-                            I regularly read English technical documentation, participate in international developer communities, and watch educational videos to continuously enhance both my language and technical skills.<br /><br />
+1. Participated in the postpartum care center platform project, responsible for integrating the e-invoice API (provided by Pan-U E-Commerce), adjusting finance modules, and maintaining the overall system.<br />
 
-                            <strong>Work Ethic and Future Outlook</strong><br />
-                            I am proactive, responsible, and communicative, always seeking solutions through exploration and validating ideas through hands-on implementation.  
-                            I look forward to applying my strengths in the workplace and making a meaningful contribution.<br /><br />
+2. Assisted in upgrading the Chia Hsin Foundation platform (CI3 → CI4, MySQL 5 → 8), completing data migration and system reconstruction.<br />
 
-                            This is my self-introduction, and I sincerely hope to have the opportunity for a further interview with your company!
+3. Utilized MS PowerApps to create digital forms, successfully replacing paper-based processes such as parking space applications, equipment loans, and travel reimbursements, thereby improving internal administrative efficiency.
+
+<br /><br />
+<strong>Assisted the HR team in creating interactive recruitment games and activity pages for campus recruitment and career fairs:</strong><br />
+
+1. <a href="https://chcgroups.github.io/forNTU/" target="_blank">NTU Campus Recruitment</a><br />
+
+2. <a href="https://chcgroups.github.io/for_yourator/" target="_blank">Yourator Career Fair</a><br />
+
+3. <a href="https://chcgroups.github.io/forFJU/" target="_blank">FJU Campus Recruitment</a><br />
+
+4. <a href="https://chcgroups.github.io/forfun/game" target="_blank">Interactive Online Quiz Game</a>
+
+<br /><br /><font color="orange"><strong>
+Projects involved CodeIgniter 3/4, MySQL, API integration, basic front-end interaction, and internal MIS maintenance.
+</strong></font><br /><br />
+Additionally, I built a personal website to showcase my projects and skills, and I continue to update and maintain it:<br />
+About Me – <a href="https://samlichhan.github.io/about-me/" target="_blank">Personal Portfolio Website</a><br />
+
+<br /><strong>Language Skills and International Communication</strong><br />
+In 2022, I completed an “Advanced International English Communication” course focused on business and technology-related English. Upon completion, I also improved my TOEIC score.<br />
+I regularly read English technical documentation and follow international developer communities and tutorials to continuously sharpen both my language and technical proficiency.
+
+<br /><br /><strong>Attitude and Future Outlook</strong><br />
+With strong self-motivation, a high sense of responsibility, and excellent communication and coordination skills, I am accustomed to solving problems through experimentation and validating technologies through practical application. I look forward to applying my expertise and making meaningful contributions in my future role.
+
+<br /><br />
+This is my self-introduction. I sincerely hope for the opportunity to interview with your esteemed company.
                             `;
 
 var tababoutintro_cntext = `您好，我是李承翰，畢業於東吳大學資訊管理學系。在四年的學習歷程中，我不僅打下了紮實的資訊技術基礎，也主動參與實作專案與業界實務，累積跨技術整合與問題解決的實戰經驗，奠定全面基礎。<br /><br />
@@ -113,21 +92,21 @@ var tababoutintro_cntext = `您好，我是李承翰，畢業於東吳大學資�
                             <a
                               href="https://chcgroups.github.io/forNTU/"
                               target="_blank"
-                              >台大校園招募活動頁</a
+                              >台大校園招募</a
                             >
                             <br />
                             2.
                             <a
                               href="https://chcgroups.github.io/for_yourator/"
                               target="_blank"
-                              >Yourator 徵才博覽會頁</a
+                              >Yourator 徵才博覽會</a
                             >
                             <br />
                             3.
                             <a
                               href="https://chcgroups.github.io/forFJU/"
                               target="_blank"
-                              >輔大校園招募頁</a
+                              >輔大校園招募</a
                             >
                             <br />
                             4.
@@ -158,7 +137,7 @@ var tababoutintro_cntext = `您好，我是李承翰，畢業於東吳大學資�
                             <strong>態度與未來展望</strong><br />
                             具備主動學習力、高度責任感與溝通協調能力的我，習慣從問題中尋求解法、在實作中驗證技術。
                             期望未來在工作上，能讓自己的專長充分發揮。<br /><br />
-                            以上是我的自傳，期望能與貴公司進一步面試的機會!`;
+                            以上是我的自傳，期望能與貴公司有進一步面試的機會!`;
 
 const trans = {
   en: {
@@ -197,25 +176,105 @@ const trans = {
     taboutexp: "Experience",
     tabouttimeline1: "Bachelor of Computer Science Information Management",
     taboutdes1:
-      "Participated in multiple workshops, including Android app development, exploration of the Meta metaverse, Python self-learning groups with applications in fake news verification, IoT smart applications with Arduino, SketchUp modeling, and foundational implementation of Kali Linux. Achieved Honorable Mention in the JOY 2023 Sustainable Happiness Creative Competition and participated in the 2022 Fourth Hetai Public Welfare Dreamers Corporate Competition. Developed an AI Presentation Generator as a project, served as a research assistant for the DMOJ Programming Assessment System, and worked as a teaching assistant for the courses Computer Programming and Object-Oriented Programming.",
+      // "Participated in multiple workshops, including Android app development, exploration of the Meta metaverse, Python self-learning groups with applications in fake news verification, IoT smart applications with Arduino, SketchUp modeling, and foundational implementation of Kali Linux. Achieved Honorable Mention in the JOY 2023 Sustainable Happiness Creative Competition and participated in the 2022 Fourth Hetai Public Welfare Dreamers Corporate Competition. Developed an AI Presentation Generator as a project, served as a research assistant for the DMOJ Programming Assessment System, and worked as a teaching assistant for the courses Computer Programming and Object-Oriented Programming.",
+      `During my time at university, I actively participated in various workshops, including Android application development, exploration of the Meta metaverse, a Python self-learning group focused on fake news verification, IoT smart applications using Arduino, SketchUp modeling, and foundational practices in Kali Linux. These experiences allowed me to explore new knowledge and technologies beyond the classroom.<br /><br />
+
+In addition to workshops and self-directed learning, I received an Honorable Mention in the JOY 2023 Sustainable Happiness Innovation Competition for a project themed around an "Online Learning Platform." I also participated in the 2022 4th Hotai Social Dreamers Competition. Although my team only reached the finalist stage, the experience provided valuable opportunities to communicate and collaborate with teammates and professionals from diverse backgrounds.<br /><br />
+
+For my junior-year capstone project, our team developed an "AI Presentation Generator." I was primarily responsible for UI layout design, functional module development, as well as testing and refining the final product. Concurrently, I contributed to the development of the "DMOJ Online Programming Evaluation Platform." <br /><br />
+
+In my senior year, I served as a teaching assistant for two courses: “Computer Programming” and “Object-Oriented Programming.” My main responsibilities included teaching Java programming, designing in-class quizzes, and maintaining the DMOJ system to ensure fair and stable operation during exams.<br />`,
     tabouttimeline1_1: "AI Presentation Generator",
     taboutdes1_1:
       "Developed a system integrating ChatGPT API to generate AI-driven text and corresponding thematic images, which were seamlessly populated into appropriate PowerPoint templates. The project involved fine-tuning AI-generated content and enabling users to regenerate, add, or modify content through an interactive interface. The final output was a complete PowerPoint file featuring fully designed presentation slides and speaker notes with supplementary scripts.",
-    tabouttimeline2: "Research Assistant",
+    tabouttimeline2: "Research Assistant & Teaching Assistant",
     taboutdes2:
-      "Developed a DMOJ program evaluation system and authored comprehensive installation and user manuals to facilitate seamless handover and ongoing maintenance",
+      // "Developed a DMOJ program evaluation system and authored comprehensive installation and user manuals to facilitate seamless handover and ongoing maintenance",
+      `During my time as a research assistant, I supported the professor in introducing the DMOJ (Online Programming Evaluation System) into the campus environment. It has since become the designated platform for teaching exercises, quizzes, midterms and final exams, as well as programming certification tests. I authored comprehensive installation and user manuals, and regularly discussed potential challenges and issues with the professor during active use to ensure a smooth system handover.<br /><br />
+
+As a teaching assistant, I helped design exam questions, provided students with additional practice problems both online and in person, and analyzed student performance data to ensure that the assessments aligned with the course content and effectively measured learning outcomes.`,
     tabouttimeline2_1: "Visual Analysis Charts",
     taboutdes2_1:
       "Managed internal self-evaluation and supervisor assessment data by creating visual analysis charts and comprehensive spreadsheets, streamlining data organization and supporting future data-driven decision-making",
     tabouttimeline2_2: "Teaching Assistant",
     taboutdes2_2:
       "<span>Computer Programming</span><span>Object Oriented Programming</span> <br />Assist professors in setting exam questions, clarify students' doubts, and analyze the distribution of students' grades",
-    tabouttimeline2_3: "Intern of Audit",
+    tabouttimeline2_3: "CHC - Intern of Audit",
     taboutdes2_3:
-      "Developed audit utility programs, including verification of company database records against public Ministry of Economic Affairs data, a visual interface for searching NAS documents by keyword or category, templates for subsidiary procurement and sales reports in Power BI, and an integrated audit working paper system",
-    tabouttimeline2_4: "Intern of IT",
+      // "Developed audit utility programs, including verification of company database records against public Ministry of Economic Affairs data, a visual interface for searching NAS documents by keyword or category, templates for subsidiary procurement and sales reports in Power BI, and an integrated audit working paper system",
+      `<strong>Data Comparison Program</strong><br />
+
+- Compared customer information files (Excel) with official business registration data, using cell colors to indicate the comparison results.<br /><br />
+
+<strong>Audit Report Search System</strong><br />
+
+- Provided a visual interface for category-based filtering and presented search results, with each result displayed as a clickable button that opens the corresponding file stored on the NAS.<br /><br />
+
+<strong>Hotel Supplier & Procurement Item Analysis</strong><br />
+
+- Processed uploaded shopping list spreadsheets by re-organizing the data according to a user-defined monthly date range, then imported and visualized the data dynamically in Power BI.<br /><br />
+
+<strong>Online Audit Workflow Platform</strong><br />
+
+- Maintained the audit project database online<br />
+
+- Enabled team members to create audit working papers directly through the system<br />
+
+- Allowed supervisors to review, revise, and sign off audit documents online<br />
+
+<font color="orange">
+This platform digitized the Audit Office’s routine tasks, replacing traditional paper-based processes with a streamlined digital workflow.
+</font>`,
+    tabouttimeline2_4: "CHC - Intern of IT",
     taboutdes2_4:
-      "Developed and tested Microsoft PowerApps to digitize legacy paper-based forms, upgraded outdated system frameworks, created web-based mini-games and data collection tools for the Human Resources department, and led back-end development while supporting front-end tasks for the electronic invoice project on a postpartum care center's website",
+      // "Developed and tested Microsoft PowerApps to digitize legacy paper-based forms, upgraded outdated system frameworks, created web-based mini-games and data collection tools for the Human Resources department, and led back-end development while supporting front-end tasks for the electronic invoice project on a postpartum care center's website",
+      `<strong>Online Audit Workflow Platform</strong><br />
+
+- Collaborated with users to discuss feature enhancements and future optimizations<br /><br />
+
+<strong>Digitization of Paper-Based Forms</strong><br />
+
+- Equipment Loan Request Form<br />
+
+- Parking Fee Application Form<br />
+
+- Business Travel Reimbursement Form<br /><br />
+
+<strong>Interactive Recruitment Games</strong><br />
+
+- <a href="https://chcgroups.github.io/forNTU/" target="_blank">NTU Campus Recruitment</a><br />
+
+- <a href="https://chcgroups.github.io/for_yourator/" target="_blank">Yourator Career Fair</a><br />
+
+- <a href="https://chcgroups.github.io/forFJU/" target="_blank">FJU Campus Recruitment</a><br />
+
+- <a href="https://chcgroups.github.io/forfun/game" target="_blank">Online Interactive Quiz Game</a><br /><br />
+
+<strong>Postpartum Care System</strong><br />
+
+- Discussed new features and updates with users<br />
+
+- Integrated new room rate calculation logic into related modules<br />
+
+- Implemented electronic invoice API<br />
+
+- Assisted mentor with feature development, layout design, and refactoring legacy code<br /><br />
+
+<strong>MIS Support</strong><br />
+
+- Assisted users with computer-related issues<br />
+
+- Helped configure Wi-Fi and networking devices<br />
+
+- Supported maintenance of the asset management system<br />
+
+- Helped manage antivirus software usage and controls<br /><br />
+
+<strong>Chia Hsin Foundation System (Financial Aid & Sustainability)</strong><br />
+
+- Added new features and UI enhancements<br />
+
+- Assisted with system version upgrades<br />`,
 
     // 作品集
     tport: "Portfolio",
@@ -261,8 +320,8 @@ const trans = {
     tab_home: "<i class='fa fa-home'></i> 首頁",
     tab_about: "<i class='fa fa-user'></i> 關於",
     // tab_services: "<i class='fa fa-list'></i> 服務",
-    tab_portfolio: "<i class='fa fa-briefcase'></i> 作品集",
-    tab_contact: "<i class='fa fa-comments'></i> 聯絡我",
+    tab_portfolio: "<i class='fa fa-briefcase'></i> 作品",
+    tab_contact: "<i class='fa fa-comments'></i> 聯絡",
 
     // 關於我
     tabout: "關於我",
@@ -277,53 +336,137 @@ const trans = {
     taboutphone: "聯絡電話 : <span>(+886) 0987-115-592</span>",
     taboutcity: "居住城市 : <span>台灣, 台北市</span>",
     tabouthireme: "聯絡我!",
-    taboutedu: "學習歷程",
+    taboutedu: "學歷",
     taboutexp: "工作經驗",
-    tabouttimeline1: "資訊管理學系學士",
+    tabouttimeline1: "資訊管理學系 學士",
     taboutdes1:
-      "參與多項工作坊，包括 Android 應用程式開發、Meta 元宇宙探索、應用於假新聞驗證的 Python 自學小組、Arduino 物聯網智慧應用、SketchUp 建模，以及 Kali Linux 基礎實作。在 JOY 2023 永續幸福創意競賽中獲得佳作，並參加 2022 第四屆和泰公益圓夢企業競賽。完成 AI 簡報生成器專案，擔任 DMOJ 程式評測系統的研究助理，並擔任「計算機程式設計」及「物件導向程式設計」課程的教學助理",
+      // "參與多項工作坊，包括 Android 應用程式開發、Meta 元宇宙探索、應用於假新聞驗證的 Python 自學小組、Arduino 物聯網智慧應用、SketchUp 建模，以及 Kali Linux 基礎實作。在 JOY 2023 永續幸福創意競賽中獲得佳作，並參加 2022 第四屆和泰公益圓夢企業競賽。完成 AI 簡報生成器專案，擔任 DMOJ 程式評測系統的研究助理，並擔任「計算機程式設計」及「物件導向程式設計」課程的教學助理",
+      `在學期間參與多項工作坊，包括 Android
+                              應用程式開發、Meta 元宇宙探索、應用於假新聞驗證的
+                              Python 自學小組、Arduino 物聯網智慧應用、SketchUp
+                              建模 ，以及 Kali Linux
+                              基礎實作等，接觸各式課堂以外的新知識與技術。
+                              <br /><br />
+                              除參與工作坊與自學小組，在 JOY 2023
+                              永續幸福創意競賽中以"線上課程平台"為主題獲得佳作，並曾參加
+                              2022
+                              第四屆和泰公益圓夢企業競賽，雖然僅止步於入圍，但也從中獲得不少與來自各地的團員與業界人士溝通與討論的機會。
+                              <br /><br />
+                              大三的專題競賽以 "AI 簡報生成器"
+                              為主題，我在團隊中主要處理呈現畫面的編排、各項功能模塊的程式碼撰寫以及後續正式項目的測試與完善，製作專題的同時同步進行
+                              "DMOJ線上程式評測平台" 的建置。
+                              <br /><br />
+                              大四上下學期分別擔任「計算機程式設計」及「物件導向程式設計」兩門課程的教學助理，主要職責為教導學生Java程式、設計隨堂考題與維護DMOJ線上程式評測平台在考試時的運作與驗證其考試公正性。`,
     tabouttimeline1_1: "AI 簡報生成",
     taboutdes1_1:
       "開發了一套系統，整合 ChatGPT API 以生成 AI 驅動的文本及相應主題圖片，並將其填入適合的 PowerPoint 範本中。專案包括對 AI 生成內容的微調，讓使用者能透過互動介面重新生成、添加或修改內容。最終輸出為一個完整的 PowerPoint 文件，其中包含完善的簡報頁面以及附有補充腳本的演講者備註",
-    tabouttimeline2: "研究助理",
+    tabouttimeline2: "研究助理 & 教學助理",
     taboutdes2:
-      "開發了 DMOJ 程式評測系統，並撰寫完整的安裝與使用手冊，以確保系統交接順利並支持後續的維護工作",
+      // "開發了 DMOJ 程式評測系統，並撰寫完整的安裝與使用手冊，以確保系統交接順利並支持後續的維護工作",
+      `研究助理期間協助教授將DMOJ(線上程式評測系統)引入校園，現已成為教學練習用以及各項考試(小考、期中期末考、程式檢定考)指定平台，後續不僅撰寫完整的安裝與使用手冊，在實際使用期間也多次與教授商討此平台可能面臨的問題以及挑戰，以確保系統交接順利。
+                              <br /><br />
+                              教學助理期間協助教授設計考題、提供學生額外練習題目與線上線下問答，以及分析學生成績分佈，確保考題符合教學內容以及學生學習成效。`,
     tabouttimeline2_1: "視覺化分析圖表",
     taboutdes2_1:
       "管理內部自我評估與主管評核數據，透過製作視覺化分析圖表及完整的電子表格，優化數據整理流程，並支持未來以數據為導向的決策制定。",
     tabouttimeline2_2: "教學助理",
     taboutdes2_2:
       "<span>計算機程式設計</span><span>物件導向程式設計</span> <br />協助教授設計考題，解答學生疑問，並分析學生成績分佈。",
-    tabouttimeline2_3: "稽核室實習生",
+    tabouttimeline2_3: "嘉新水泥 - 稽核室實習生",
     taboutdes2_3:
-      "開發多項稽核工具程式，包括比對公司資料庫記錄與經濟部公開數據的驗證功能、關鍵字或分類搜尋 NAS 文件的視覺化介面、Power BI 子公司採購與銷售報表模板，以及整合的審計工作底稿系統。",
-    tabouttimeline2_4: "資訊處實習生",
+      // "開發多項稽核工具程式，包括比對公司資料庫記錄與經濟部公開數據的驗證功能、關鍵字或分類搜尋 NAS 文件的視覺化介面、Power BI 子公司採購與銷售報表模板，以及整合的審計工作底稿系統。",
+      `<strong>資料對比程式</strong>
+                              <br />-
+                              將客戶信息檔(Excel)與商工行政資料做比對，以儲存格顏色區分比對結果
+                              <br /><br />
+                              <strong>稽核報告查找系統</strong>
+                              <br />-
+                              透過視覺化介面篩選類別，之後呈現搜尋結果，其中每一筆結果都以按鈕形式呈現，可直接開啟NAS中對應的檔案
+                              <br /><br />
+                              <strong>飯店供應商 & 採購品項分析</strong>
+                              <br />-
+                              將上傳的購物清單試算表依照使用者輸入之月份區間重新統整成一份新的試算表，並在
+                              PowerBI 上做資料帶入與視覺化動態呈現 <br /><br />
+                              <strong>稽核線上作業平台</strong>
+                              <br />- 線上維護稽核作業項目資料庫 <br />-
+                              成員可線上製作稽核作業底稿文件 <br />-
+                              主管可線上簽核、修訂稽核作業底稿文件 <br /><font
+                                color="orange"
+                                >此項目主要將稽核室平常工作事項電子化，一改以往紙本作業的繁複流程</font
+                              >`,
+    tabouttimeline2_4: "嘉新水泥 - 資訊處實習生",
     taboutdes2_4:
-      "開發並測試 Microsoft PowerApps以數位化傳統紙本表單，升級過時系統框架，為人力資源部門製作基於網頁的迷你遊戲及數據收集工具，並主導月子中心系統電子發票專案的後端開發，同時支援前端相關工作。",
+      // "開發並測試 Microsoft PowerApps以數位化傳統紙本表單，升級過時系統框架，為人力資源部門製作基於網頁的迷你遊戲及數據收集工具，並主導月子中心系統電子發票專案的後端開發，同時支援前端相關工作。",
+      `<strong>稽核線上作業平台</strong>
+                              <br />- 與使用者討論後續新增功能與優化等項目
+                              <br /><br />
+                              <strong>數位化部分紙本表單</strong>
+                              <br />- 設備租借表單 <br />- 停車費申請表 <br />-
+                              出差旅費報支表 <br /><br />
+                              <strong>招募活動小遊戲</strong>
+                              <br />-
+                              <a
+                                href="https://chcgroups.github.io/forNTU/"
+                                target="_blank"
+                                >台大校園招募</a
+                              >
+                              <br />-
+                              <a
+                                href="https://chcgroups.github.io/for_yourator/"
+                                target="_blank"
+                                >Yourator 徵才博覽會</a
+                              >
+                              <br />-
+                              <a
+                                href="https://chcgroups.github.io/forFJU/"
+                                target="_blank"
+                                >輔大校園招募</a
+                              >
+                              <br />-
+                              <a
+                                href="https://chcgroups.github.io/forfun/game"
+                                target="_blank"
+                                >線上互動填答遊戲</a
+                              >
+                              <br /><br />
+                              <strong>月子中心系統</strong>
+                              <br />- 與使用者討論欲新增功能以及修改舊有部分
+                              <br />- 將新的房費計算邏輯導入至相關功能模塊
+                              <br />- 串接電子發票API <br />- 協助Mentor
+                              新增功能、版面與修改舊有程式邏輯 <br /><br />
+                              <strong>MIS 部分事項</strong>
+                              <br />- 協助使用者電腦相關問題 <br />-
+                              協助架設wi-fi 與網路設備相關設定 <br />-
+                              協助維護資產管理系統 <br />- 協助控管防毒軟體
+                              <br /><br />
+                              <strong>嘉新基金會系統(清寒、永續力)</strong>
+                              <br />- 新增功能與介面呈現 <br />-
+                              協助系統版本升級`,
 
     // 作品集
     tport: "作品集",
     tportintro: "最近專案:",
-    tportai: "▲ 基於人工智慧的簡報生成",
-    tportdmoj: "▲ DMOJ 程式檢測系統",
+    tportai: "▲ AI 簡報生成器",
+    tportdmoj: "▲ DMOJ 線上程式評測系統",
     tportfile: "▲ 稽核資料查詢系統",
     tportanaly: "▲ 飯店採購與銷售指標分析",
-    tportaudit: "▲ 稽核系統",
+    tportaudit: "▲ 稽核線上作業平台",
     tportbaby: "▲ 月子中心照護系統",
     tportscholar: "▲ 獎學金申請平台",
-    tporthrform: "▲ 問卷填答(未正式啟用)",
-    tporthrgame1: "▲ 台大校園徵才抽獎小遊戲",
-    tporthrgame: "▲ Yourator 職涯博覽會抽獎小遊戲",
+    tporthrform: "▲ 線上互動填答遊戲",
+    tporthrgame1: "▲ 台大校園招募",
+    tporthrgame: "▲ Yourator 職涯博覽會",
+    tporthrgame2: "▲ 輔大校園招募",
     tportmsapp1: "▲ 公司外出旅費報支表",
 
     // 聯絡我
     tcon: "聯絡我",
     tconques: "任何問題?",
-    tconserve: "隨時等您聯繫!",
+    tconserve: "隨時恭候您的來訊!",
     tcemail: "信箱",
     tcwebsite: "網站",
-    tconphone: "透過電話聯繫我",
-    tconsendmail: "寄信給我",
+    tconphone: "電話",
+    tconsendmail: "電子信箱",
     tconres: "收到您的來信是我的榮幸!",
   },
 };
