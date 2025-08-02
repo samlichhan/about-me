@@ -146,7 +146,7 @@ const trans = {
 
     // 首頁
     twelcome: "Hello, my name is <span class='name'>Sam Li</span>",
-    tican: "I can serve as <span class='typing'></span>",
+    tican: "<span class='typing'></span>",
     tsintro:
       // "I am a programmer with over one year of internship experience, specializing in front-end and back-end engineering, creating applications using Python, creating visual charts using PowerBI, and more",
       `Thank you for taking the time to visit my website 🙏<br />
@@ -307,7 +307,7 @@ This platform digitized the Audit Office’s routine tasks, replacing traditiona
 
     // 首頁
     twelcome: "您好，我是<span class='name'>李承翰</span>",
-    tican: "我可以是 <span class='typing'></span>",
+    tican: "<span class='typing'></span>",
     tsintro:
       // "我是一名程式設計師，擁有超過一年實習經驗，專注於前端和後端開發，熟悉使用 Python 開發應用程式、使用 PowerBI 創建視覺化圖表等。",
       `感謝您抽空來到我的網站 🙏<br />
