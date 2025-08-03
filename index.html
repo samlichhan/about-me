@@ -31,7 +31,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="twebtitle">關於我 - Sam Li</title>
+    <title id="twebtitle">Saming | record by Sam</title>
 
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/skins/color-1.css" />
@@ -83,7 +83,7 @@
       <!-- sidebar -->
       <div class="aside">
         <div class="logo">
-          <a href="#"><span>S</span>am</a>
+          <a href="/"><span>S</span>am</a>
         </div>
         <div class="nav-toggler">
           <span></span>
@@ -99,6 +99,11 @@
           </li>
           <!-- <li>
             <a href="#services" id="tab_services"><i class="fa fa-list"></i> Services</a>
+          </li> -->
+          <!-- <li>
+            <a href="#article" id="tab_article"
+              ><i class="fa fa-bookmark"></i> 文章</a
+            >
           </li> -->
           <li>
             <a href="#portfolio" id="tab_portfolio"
@@ -686,6 +691,71 @@
           </div>
         </section>
         <!-- services section end -->
+        <!-- article section start -->
+        <section class="article section" id="article">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2 id="tpart">文章</h2>
+              </div>
+              <div class="article-item padd-15">
+                <div class="article-title">
+                  <h3>
+                    <a
+                      href="#article-content"
+                      id="tab_test1title"
+                      style="color: var(--text-black-700)"
+                      >test1 title</a
+                    >
+                  </h3>
+                </div>
+                <div class="article-content">
+                  <p>test</p>
+                </div>
+                <div class="article-time">
+                  <p>2025-08-03</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- article section end -->
+        <!-- article content section start -->
+        <section class="article-content section" id="article-content">
+          <div class="container">
+            <div class="row">
+              <div class="article-content-title padd-15">
+                <p>
+                  <a
+                    href="#article"
+                    id="tab_article"
+                    style="color: var(--text-black-700)"
+                    ><i class="fa fa-caret-left"></i> 返回文章列表</a
+                  >
+                </p>
+                <h2 id="tpartcont">test title1</h2>
+                <p style="color: var(--skin-color)">
+                  <i class="fa fa-calendar"></i> 2025.08.03 |
+                  <i class="fa fa-clock"></i> 1 minute
+                </p>
+                <br />
+              </div>
+              <div class="article-content-item padd-15">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- article content section end -->
         <!-- portfolio section start -->
         <section class="portfolio section" id="portfolio">
           <div class="container">
@@ -1022,7 +1092,7 @@
     </div>
     <!-- live style switcher end -->
     <!-- JS section -->
-    <script>
+    <!-- <script>
       const birthDate = new Date("2002-03-26");
       const today = new Date();
 
@@ -1035,7 +1105,7 @@
       }
 
       document.getElementById("age-value").textContent = age;
-    </script>
+    </script> -->
     <script>
       document
         .querySelectorAll(".collapsible-container")

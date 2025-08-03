@@ -142,7 +142,7 @@ var tababoutintro_cntext = `您好，我是李承翰，畢業於東吳大學資�
 const trans = {
   en: {
     // 網頁名稱
-    twebtitle: "About me - Sam Li",
+    twebtitle: "Saming | record by Sam",
 
     // 首頁
     twelcome: "Hello, my name is <span class='name'>Sam Li</span>",
@@ -303,7 +303,7 @@ This platform digitized the Audit Office’s routine tasks, replacing traditiona
   },
   zh: {
     // 網頁名稱
-    twebtitle: "關於我 - 李承翰",
+    twebtitle: "Saming | record by Sam",
 
     // 首頁
     twelcome: "您好，我是<span class='name'>李承翰</span>",

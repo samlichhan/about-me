@@ -800,6 +800,75 @@ h3.myprofession {
   line-height: 25px;
 }
 
+/* article */
+.article .container {
+  padding-bottom: 40px;
+}
+
+.article .article-item {
+  position: relative;
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: var(--bg-black-100);
+  border: 1px solid var(--bg-black-50);
+  border-radius: 10px;
+}
+
+.article .article-item .article-title {
+  font-size: 24px;
+  color: var(--text-black-900);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.article .article-item .article-content p {
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--text-black-700);
+}
+
+.article .article-item .article-time p {
+  font-size: 14px;
+  color: var(--text-black-700);
+  margin-bottom: 10px;
+  position: absolute;
+  right: 15px;
+  bottom: 3px;
+}
+
+/* article-content */
+.article-content .container {
+  padding-bottom: 40px;
+}
+
+.article-content .article-content-title h2 {
+  font-size: 40px;
+  color: var(--text-black-900);
+  font-weight: 700;
+  position: relative;
+}
+
+.article-content .article-content-title p {
+  font-size: 15px;
+  color: var(--text-black-900);
+  font-weight: 700;
+  position: relative;
+}
+
+.article-content .article-content-item {
+  position: relative;
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 30px;
+  padding: 15px;
+  color: var(--text-black-900);
+  background-color: var(--bg-black-100);
+  border: 1px solid var(--bg-black-50);
+  border-radius: 10px;
+}
+
 /* portfolio */
 .portfolio .container {
   padding-bottom: 40px;

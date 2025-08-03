@@ -94,3 +94,30 @@ function calculateAge(birthDateStr) {
 
   return age;
 }
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    const targetId = this.getAttribute("href").slice(1);
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection && targetSection.classList.contains("section")) {
+      e.preventDefault();
+
+      // 隱藏所有 section
+      for (let i = 0; i < totalSection; i++) {
+        allSection[i].classList.remove("active");
+      }
+
+      // 顯示目標 section
+      targetSection.classList.add("active");
+
+      // 更新側邊欄 active 標記（若對應的項目存在）
+      updateNav(this);
+
+      // 可選：關閉側邊欄（手機版）
+      // if (window.innerWidth < 1200) {
+      //   asideSectionTogglerBtn();
+      // }
+    }
+  });
+});
