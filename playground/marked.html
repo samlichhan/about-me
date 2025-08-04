@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Marked in the browser</title>
+  </head>
+  <body>
+    <div id="content"></div>
+
+    <!-- Include Marked.js from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+
+    <script>
+      // Get the div element where the HTML will be rendered
+      const contentDiv = document.getElementById("content");
+
+      // Define the Markdown string
+      const markdownString =
+        "# Marked in the browser\n\nRendered by **marked**. \n\n- Item 1\n- Item 2";
+
+      // Parse the Markdown string and set the innerHTML of the div
+      contentDiv.innerHTML = marked.parse(markdownString);
+    </script>
+  </body>
+</html>

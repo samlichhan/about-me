@@ -121,3 +121,143 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+
+// 讀取並轉換 Markdown 成 HTML
+async function loadMarkdownArticle(filePath, meta = null) {
+  try {
+    const response = await fetch(filePath);
+    const markdown = await response.text();
+    // console.log(markdown);
+    const html = marked.parse(markdown);
+    const container = document.getElementById("post-content-container");
+
+    // 填入 Markdown 主體
+    container.innerHTML = `<div class="markdown-body">${html}</div>`;
+
+    if (meta) {
+      document.getElementById("post-clicked-title").textContent = meta.title;
+      document.getElementById("post-clicked-time").innerHTML = `
+        <i class="fa fa-calendar" style="color: var(--skin-color)"></i>
+        ${meta.date} |
+        <i class="fa fa-clock" style="color: var(--skin-color)"></i>
+        ${meta.read_time}
+      `;
+    }
+
+    const tagContainer = document.getElementById("post-tags");
+    if (tagContainer) {
+      tagContainer.innerHTML = meta.tags
+        .map((tag) => `<span class="tag">${tag}</span>`)
+        .join(" ");
+    }
+
+    hljs.highlightAll();
+  } catch (error) {
+    document.getElementById("post-content-container").innerHTML =
+      "<p>文章載入失敗，請稍後再試。</p>";
+    console.error("載入文章失敗：", error);
+  }
+}
+
+// // 頁面載入時自動載入第一篇文章
+// window.addEventListener("DOMContentLoaded", () => {
+//   loadMarkdownArticle("./posts/demo.md");
+// });
+
+async function loadPostList(filterTag = null) {
+  try {
+    const response = await fetch("./posts/index.json");
+    const posts = await response.json();
+    // console.log(posts);
+
+    // 取得所有不重複標籤
+    const allTags = new Set();
+    posts.forEach((post) => post.tags.forEach((tag) => allTags.add(tag)));
+
+    // 建立篩選標籤 UI
+    const tagFilter = document.getElementById("tag-filter");
+    tagFilter.innerHTML = `<span class="tag tag-filter-all ${
+      !filterTag ? "active" : ""
+    }">全部文章</span>`;
+    allTags.forEach((tag) => {
+      tagFilter.innerHTML += `<span class="tag tag-filter ${
+        filterTag === tag ? "active" : ""
+      }" data-tag="${tag}">${tag}</span>`;
+    });
+
+    // 綁定點擊事件
+    tagFilter.querySelectorAll(".tag-filter").forEach((el) => {
+      el.addEventListener("click", function () {
+        const selected = this.dataset.tag;
+        loadPostList(selected);
+      });
+    });
+    tagFilter.querySelector(".tag-filter-all").addEventListener("click", () => {
+      loadPostList(null);
+    });
+
+    // 過濾文章
+    const filteredPosts = filterTag
+      ? posts.filter((post) => post.tags.includes(filterTag))
+      : posts;
+
+    const listContainer = document.getElementById("post-list");
+    listContainer.innerHTML = "";
+
+    filteredPosts.forEach((post) => {
+      const listItem = document.createElement("div");
+      listItem.classList.add("post-item");
+      listItem.innerHTML = `
+        <h3 class="post-title" data-file="${post.file}">${post.title}</h3>
+        <p class="post-meta">${post.author} ｜ ${post.date} ｜ 閱讀時間：約${
+        post.read_time
+      }</p>
+        <div class="post-tags">
+          ${post.tags.map((tag) => `<span class="tag">${tag}</span>`).join(" ")}
+        </div>
+      `;
+      listContainer.appendChild(listItem);
+    });
+
+    // posts.forEach((post, index) => {
+    //   const listItem = document.createElement("div");
+    //   listItem.classList.add("post-item");
+    //   listItem.innerHTML = `
+    //     <h3 class="post-title" data-file="${post.file}">${post.title}</h3>
+    //     <p class="post-meta">作者：${post.author} ｜ ${
+    //     post.date
+    //   } ｜ 閱讀時間：約${post.read_time}</p>
+    //     <div class="post-tags">
+    //       ${post.tags.map((tag) => `<span class="tag">${tag}</span>`).join(" ")}
+    //     </div>
+    //   `;
+    //   listContainer.appendChild(listItem);
+    // });
+
+    // 綁定點擊事件
+    document.querySelectorAll(".post-title").forEach((el) => {
+      el.addEventListener("click", function () {
+        const file = this.dataset.file;
+        const postMeta = posts.find((p) => p.file === file);
+
+        loadMarkdownArticle(`posts/${file}`, postMeta);
+        showSectionById("post-content");
+      });
+    });
+  } catch (error) {
+    console.error("文章清單載入失敗：", error);
+    document.getElementById("post-list").innerHTML =
+      "<p>無法載入文章清單。</p>";
+  }
+}
+
+function showSectionById(id) {
+  document
+    .querySelectorAll(".section")
+    .forEach((s) => s.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  loadPostList();
+});

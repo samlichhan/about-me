@@ -35,9 +35,14 @@
 
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/skins/color-1.css" />
+    <link rel="stylesheet" href="./css/markdown.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.css"
     />
     <!-- style switcher -->
     <link
@@ -100,11 +105,11 @@
           <!-- <li>
             <a href="#services" id="tab_services"><i class="fa fa-list"></i> Services</a>
           </li> -->
-          <!-- <li>
-            <a href="#article" id="tab_article"
+          <li>
+            <a href="#post" id="tab_post"
               ><i class="fa fa-bookmark"></i> 文章</a
             >
-          </li> -->
+          </li>
           <li>
             <a href="#portfolio" id="tab_portfolio"
               ><i class="fa fa-briefcase"></i> 作品</a
@@ -691,71 +696,62 @@
           </div>
         </section>
         <!-- services section end -->
-        <!-- article section start -->
-        <section class="article section" id="article">
+        <!-- post section start -->
+        <section class="post section" id="post">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
                 <h2 id="tpart">文章</h2>
               </div>
-              <div class="article-item padd-15">
-                <div class="article-title">
-                  <h3>
-                    <a
-                      href="#article-content"
-                      id="tab_test1title"
-                      style="color: var(--text-black-700)"
-                      >test1 title</a
-                    >
-                  </h3>
-                </div>
-                <div class="article-content">
-                  <p>test</p>
-                </div>
-                <div class="article-time">
-                  <p>2025-08-03</p>
-                </div>
+
+              <div class="post-layout">
+                <!-- 左側：標籤 -->
+                <aside class="post-sidebar">
+                  <!-- <h3>標籤分類</h3> -->
+                  <div id="tag-filter" class="tag-filter"></div>
+                </aside>
+
+                <!-- 右側：文章清單 -->
+                <main class="post-main">
+                  <div id="post-list"></div>
+                </main>
               </div>
+
+              <!-- 所有標籤 -->
+              <!-- <div class="tag-filter-wrapper">
+                <div id="tag-filter" class="tag-filter"></div>
+              </div>
+              <div class="post-list" id="post-list"></div> -->
             </div>
           </div>
         </section>
-        <!-- article section end -->
-        <!-- article content section start -->
-        <section class="article-content section" id="article-content">
+        <!-- post section end -->
+        <!-- post content section start -->
+        <section class="post-content section" id="post-content">
           <div class="container">
             <div class="row">
-              <div class="article-content-title padd-15">
+              <div class="post-content-title padd-15">
                 <p>
                   <a
-                    href="#article"
-                    id="tab_article"
+                    href="#post"
+                    id="tab_post"
                     style="color: var(--text-black-700)"
                     ><i class="fa fa-caret-left"></i> 返回文章列表</a
                   >
                 </p>
-                <h2 id="tpartcont">test title1</h2>
-                <p style="color: var(--skin-color)">
-                  <i class="fa fa-calendar"></i> 2025.08.03 |
-                  <i class="fa fa-clock"></i> 1 minute
-                </p>
+                <h2 id="post-clicked-title"></h2>
+                <p id="post-clicked-time"></p>
+                <div id="post-tags" style="margin-top: 10px"></div>
                 <br />
               </div>
-              <div class="article-content-item padd-15">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </p>
-              </div>
+              <div
+                class="post-content-container"
+                id="post-content-container"
+              ></div>
             </div>
           </div>
         </section>
-        <!-- article content section end -->
+        <!-- post content section end -->
         <!-- portfolio section start -->
         <section class="portfolio section" id="portfolio">
           <div class="container">
@@ -1083,9 +1079,9 @@
         <span class="color-4" onclick="setActiveStyle('color-4')"></span>
         <span class="color-5" onclick="setActiveStyle('color-5')"></span>
       </div>
-      <div class="language-switcher-toggler s-icon">
+      <!-- <div class="language-switcher-toggler s-icon">
         <i class="fa-solid"></i>
-      </div>
+      </div> -->
       <!-- <div class="go-to-top s-icon" id="backToTop">
         <i class="fa fa-angle-up"></i>
       </div> -->
@@ -1159,5 +1155,7 @@
     <script src="./js/script.js"></script>
     <script src="./js/style-switcher.js"></script>
     <script src="./js/language.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   </body>
 </html>
