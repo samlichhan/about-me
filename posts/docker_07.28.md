@@ -1,3 +1,3 @@
 # 常見命令
 
-![alt text](/posts/images/image-1.png)
+![alt text](https://raw.githubusercontent.com/samlichhan/about-me/refs/heads/main/posts/images/image-1.png)
