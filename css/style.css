@@ -869,6 +869,16 @@ h3.myprofession {
   border-radius: 10px;
 }
 
+.post-content .post-content-comment {
+  position: relative;
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid var(--bg-black-50);
+  border-radius: 10px;
+}
+
 #post-content-container {
   /* font-family: "LXGW WenKai Mono TC", "Ubuntu Mono", monospace; */
   font-size: 18px;
@@ -995,7 +1005,7 @@ h3.myprofession {
 /* 左側 tag 選單 */
 .post-sidebar {
   flex: 0 0 200px;
-  max-width: 100px;
+  max-width: 150px;
   border-right: 1px solid var(--bg-black-50);
   padding-right: 10px;
 }

@@ -122,12 +122,11 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// 讀取並轉換 Markdown 成 HTML
+// 讀取文章.md內容並轉換成HTML
 async function loadMarkdownArticle(filePath, meta = null) {
   try {
     const response = await fetch(filePath);
     const markdown = await response.text();
-    // console.log(markdown);
     const html = marked.parse(markdown);
     const container = document.getElementById("post-content-container");
 
@@ -152,6 +151,31 @@ async function loadMarkdownArticle(filePath, meta = null) {
     }
 
     hljs.highlightAll();
+
+    // 清除舊的 Giscus iframe
+    const giscusContainer = document.getElementById("giscus-container");
+    giscusContainer.innerHTML = "";
+
+    // 建立 Giscus 留言 iframe
+    const giscusScript = document.createElement("script");
+    giscusScript.src = "https://giscus.app/client.js";
+    giscusScript.setAttribute("data-repo", "samlichhan/about-me");
+    giscusScript.setAttribute("data-repo-id", "R_kgDONNFmgw");
+    giscusScript.setAttribute("data-category-id", "DIC_kwDONNFmg84Ct4iq");
+    giscusScript.setAttribute("data-category", "Announcements");
+    giscusScript.setAttribute("data-mapping", "specific");
+    giscusScript.setAttribute("data-term", meta.title || "Untitled"); // 以文章標題為對應 key
+    giscusScript.setAttribute("data-strict", "0");
+    giscusScript.setAttribute("data-reactions-enabled", "1");
+    giscusScript.setAttribute("data-emit-metadata", "0");
+    giscusScript.setAttribute("data-input-position", "top");
+    giscusScript.setAttribute("data-theme", "catppuccin_macchiato");
+    giscusScript.setAttribute("data-lang", "zh-TW");
+    giscusScript.setAttribute("data-loading", "lazy");
+    giscusScript.setAttribute("crossorigin", "anonymous");
+    giscusScript.async = true;
+
+    giscusContainer.appendChild(giscusScript);
   } catch (error) {
     document.getElementById("post-content-container").innerHTML =
       "<p>文章載入失敗，請稍後再試。</p>";
@@ -159,16 +183,10 @@ async function loadMarkdownArticle(filePath, meta = null) {
   }
 }
 
-// // 頁面載入時自動載入第一篇文章
-// window.addEventListener("DOMContentLoaded", () => {
-//   loadMarkdownArticle("./posts/demo.md");
-// });
-
 async function loadPostList(filterTag = null) {
   try {
     const response = await fetch("./posts/index.json");
     const posts = await response.json();
-    // console.log(posts);
 
     // 取得所有不重複標籤
     const allTags = new Set();
@@ -185,7 +203,7 @@ async function loadPostList(filterTag = null) {
       }" data-tag="${tag}">${tag}</span>`;
     });
 
-    // 綁定點擊事件
+    // 標籤點擊事件
     tagFilter.querySelectorAll(".tag-filter").forEach((el) => {
       el.addEventListener("click", function () {
         const selected = this.dataset.tag;
@@ -209,9 +227,7 @@ async function loadPostList(filterTag = null) {
       listItem.classList.add("post-item");
       listItem.innerHTML = `
         <h3 class="post-title" data-file="${post.file}">${post.title}</h3>
-        <p class="post-meta">${post.author} ｜ ${post.date} ｜ 閱讀時間：約${
-        post.read_time
-      }</p>
+        <p class="post-meta"> ${post.date} ｜ 閱讀時間：約${post.read_time}</p>
         <div class="post-tags">
           ${post.tags.map((tag) => `<span class="tag">${tag}</span>`).join(" ")}
         </div>
@@ -234,7 +250,7 @@ async function loadPostList(filterTag = null) {
     //   listContainer.appendChild(listItem);
     // });
 
-    // 綁定點擊事件
+    // 點擊文章標題後打開文章內容
     document.querySelectorAll(".post-title").forEach((el) => {
       el.addEventListener("click", function () {
         const file = this.dataset.file;

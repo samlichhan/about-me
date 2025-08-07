@@ -54,5 +54,13 @@
     "author": "Sam",
     "read_time": "3分鐘",
     "tags": ["Docker"]
+  },
+  {
+    "file": "JS_&_Tensorflow_(1).md",
+    "title": "Javascript & TensorFlow.js 學習紀錄 - demo",
+    "date": "2025-08-05",
+    "author": "Sam",
+    "read_time": "3分鐘",
+    "tags": ["Javascript", "TensorFlow.js"]
   }
 ]

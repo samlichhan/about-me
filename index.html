@@ -748,6 +748,9 @@
                 class="post-content-container"
                 id="post-content-container"
               ></div>
+              <div class="post-content-comment" id="giscus-container">
+                <!-- Giscus 留言區塊將插入此處 -->
+              </div>
             </div>
           </div>
         </section>
@@ -1147,15 +1150,27 @@
       (function () {
         emailjs.init("wMEExVoUqo9seD1ZtB1uG");
       })();
-
-      window.addEventListener("scroll", () => {
-        console.log("scrollTop:", window.scrollY);
-      });
     </script>
     <script src="./js/script.js"></script>
     <script src="./js/style-switcher.js"></script>
     <script src="./js/language.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- <script
+      src="https://giscus.app/client.js"
+      data-repo="samlichhan/about-me"
+      data-repo-id="R_kgDONNFmgw"
+      data-category-id="DIC_kwDONNFmg84Ct4iq"
+      data-mapping="specific"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="catppuccin_macchiato"
+      data-lang="zh-TW"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async
+    ></script> -->
   </body>
 </html>
